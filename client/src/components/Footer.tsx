@@ -19,14 +19,18 @@ export default function Footer() {
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/Georgian.Point.Restaurant/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-dark-bg hover:opacity-70 transition-opacity"
                 data-testid="facebook-link"
               >
                 <i className="fab fa-facebook text-2xl"></i>
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/georgian_point_restaurant/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-dark-bg hover:opacity-70 transition-opacity"
                 data-testid="instagram-link"
               >
