@@ -90,7 +90,7 @@ export default function Footer() {
             <div className="text-dark-bg opacity-80 space-y-2">
               <p>Landau 14, Baku, Azerbaijan</p>
               <p>{t('dailyHours')}</p>
-              <p>+994 50 997 06 06</p>
+              <p>+994 51 700 70 75</p>
             </div>
           </div>
         </div>

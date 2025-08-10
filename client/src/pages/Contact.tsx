@@ -4,7 +4,7 @@ export default function Contact() {
   const { t } = useTranslation();
 
   const makeReservation = () => {
-    window.open('tel:+994509970606', '_self');
+    window.open('tel:+994517007075', '_self');
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Contact() {
                     <h3 className="text-white font-semibold mb-1">
                       {t('phone')}
                     </h3>
-                    <p className="text-gray-300">+994 50 997 06 06</p>
+                    <p className="text-gray-300">+994 51 700 70 75</p>
                   </div>
                 </div>
 

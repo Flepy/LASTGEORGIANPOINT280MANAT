@@ -5,7 +5,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   const makeReservation = () => {
-    window.open('tel:+994509970606', '_self');
+    window.open('tel:+994517007075', '_self');
   };
 
   return (
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             <div className="flex items-center">
               <i className="fas fa-phone text-golden mr-2"></i>
-              <span>+994 50 997 06 06</span>
+              <span>+994 51 700 70 75</span>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function Home() {
               <h3 className="font-serif text-2xl text-golden mb-4">
                 {t('contactUs')}
               </h3>
-              <p className="text-gray-300">+994 50 997 06 06</p>
+              <p className="text-gray-300">+994 51 700 70 75</p>
             </div>
           </div>
         </div>
