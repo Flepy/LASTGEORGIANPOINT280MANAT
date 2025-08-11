@@ -15,20 +15,21 @@ export default function Home() {
       <section 
         className="min-h-screen flex items-center justify-center relative"
         style={{
-          background: `linear-gradient(rgba(58, 90, 122, 0.4), rgba(122, 148, 113, 0.3)), url(${heroBackground})`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.15), rgba(184, 84, 80, 0.1)), url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: 'fixed',
+          filter: 'contrast(1.15) brightness(1.1) saturate(1.2)'
         }}
       >
-        <div className="text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-brick-red mb-6">
+        <div className="text-center px-4 max-w-4xl mx-auto relative z-10">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-brick-red mb-6 drop-shadow-lg">
             {t('heroTitle')}
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-4">
+          <p className="text-xl md:text-2xl text-white mb-4 drop-shadow-md font-semibold">
             {t('heroSubtitle')}
           </p>
-          <p className="text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-medium">
             {t('heroDescription')}
           </p>
 
