@@ -30,11 +30,17 @@
   --chart-4: hsl(280, 65%, 60%);
   --chart-5: hsl(340, 75%, 55%);
   
-  /* Custom Colors */
-  --golden: hsl(45, 69%, 53%);
-  --golden-dark: hsl(45, 30%, 35%);
-  --dark-bg: hsl(0, 0%, 10%);
-  --dark-overlay: hsla(0, 0%, 0%, 0.6);
+  /* Custom Colors - Family Friendly */
+  --warm-orange: hsl(25, 85%, 65%);
+  --soft-cream: hsl(45, 40%, 96%);
+  --warm-beige: hsl(35, 20%, 90%);
+  --cozy-brown: hsl(25, 30%, 25%);
+  --accent-terracotta: hsl(15, 60%, 55%);
+  --text-dark: hsl(25, 30%, 15%);
+  --golden: hsl(25, 85%, 65%);
+  --golden-dark: hsl(25, 60%, 45%);
+  --dark-bg: hsl(45, 40%, 96%);
+  --dark-overlay: hsla(25, 30%, 15%, 0.6);
   
   /* Typography */
   --font-serif: 'Playfair Display', serif;
@@ -71,9 +77,9 @@
   }
 
   body {
-    @apply bg-dark-bg text-white font-sans antialiased;
+    @apply bg-dark-bg font-sans antialiased;
     background-color: var(--dark-bg);
-    color: var(--foreground);
+    color: var(--text-dark);
     font-family: var(--font-sans);
   }
 
@@ -92,16 +98,21 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-golden to-golden-dark text-dark-bg px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
-    box-shadow: 0 8px 25px hsla(45, 69%, 53%, 0.3);
+    @apply bg-gradient-to-r from-golden to-golden-dark text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    box-shadow: 0 8px 25px hsla(25, 85%, 65%, 0.3);
   }
 
   .btn-secondary {
-    @apply border-2 border-golden text-golden px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-golden hover:text-dark-bg;
+    @apply border-2 border-golden text-golden px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-golden hover:text-white;
   }
 
   .nav-link {
-    @apply text-white hover:text-golden transition-colors duration-300;
+    color: var(--cozy-brown);
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--golden);
   }
 
   .language-active {
@@ -140,6 +151,22 @@
 
   .bg-golden-dark {
     background-color: var(--golden-dark);
+  }
+
+  .text-cozy-brown {
+    color: var(--cozy-brown);
+  }
+  
+  .bg-warm-beige {
+    background-color: var(--warm-beige);
+  }
+  
+  .bg-soft-cream {
+    background-color: var(--soft-cream);
+  }
+  
+  .text-warm-orange {
+    color: var(--warm-orange);
   }
 
   .bg-dark-bg {

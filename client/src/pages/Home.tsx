@@ -15,7 +15,7 @@ export default function Home() {
       <section 
         className="min-h-screen flex items-center justify-center relative"
         style={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroBackground})`,
+          background: `linear-gradient(rgba(139, 69, 19, 0.4), rgba(139, 69, 19, 0.4)), url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
@@ -25,10 +25,10 @@ export default function Home() {
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-golden mb-6">
             {t('heroTitle')}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-4">
+          <p className="text-xl md:text-2xl text-white mb-4">
             {t('heroSubtitle')}
           </p>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed">
             {t('heroDescription')}
           </p>
 
@@ -48,7 +48,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-300">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white">
             <div className="flex items-center">
               <i className="fas fa-map-marker-alt text-golden mr-2"></i>
               <span>Landau 14, Baku, Azerbaijan</span>

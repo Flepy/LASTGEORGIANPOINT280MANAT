@@ -6,14 +6,14 @@ export default function About() {
 
   return (
     <div className="page-transition active">
-      <section className="min-h-screen pt-28 pb-20 bg-dark-bg">
+      <section className="min-h-screen pt-28 pb-20 bg-soft-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-golden mb-8">
               {t('aboutTitle')}
             </h1>
             <div className="prose prose-lg prose-invert mx-auto">
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+              <p className="text-xl text-cozy-brown leading-relaxed mb-8">
                 {t('aboutDescription')}
               </p>
 
@@ -32,7 +32,7 @@ export default function About() {
                   <h3 className="font-serif text-2xl text-golden mb-4">
                     {t('ourStory')}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-cozy-brown leading-relaxed">
                     {t('ourStoryText')}
                   </p>
                 </div>
@@ -40,7 +40,7 @@ export default function About() {
                   <h3 className="font-serif text-2xl text-golden mb-4">
                     {t('ourMission')}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-cozy-brown leading-relaxed">
                     {t('ourMissionText')}
                   </p>
                 </div>

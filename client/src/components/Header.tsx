@@ -21,7 +21,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-soft-cream bg-opacity-95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -49,7 +49,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden text-white"
+            className="lg:hidden text-cozy-brown"
             onClick={toggleMobileMenu}
             data-testid="mobile-menu-toggle"
           >
@@ -66,7 +66,7 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={item.path}
-                className="text-white text-xl hover:text-golden transition-colors"
+                className="text-cozy-brown text-xl hover:text-golden transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 data-testid={`mobile-nav-link-${item.path.slice(1) || 'home'}`}
               >

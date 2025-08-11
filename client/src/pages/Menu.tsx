@@ -178,14 +178,14 @@ export default function Menu() {
         {items.map((item, index) => (
           <div 
             key={index}
-            className="flex justify-between items-start border-b border-gray-700 pb-3"
+            className="flex justify-between items-start border-b border-gray-300 pb-3"
             data-testid={`menu-item-${index}`}
           >
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-white mb-1">
+              <h3 className="text-lg font-semibold text-cozy-brown mb-1">
                 {item.name}
                 {item.portions && (
-                  <span className="text-sm text-gray-400 font-normal ml-2">({item.portions})</span>
+                  <span className="text-sm text-gray-500 font-normal ml-2">({item.portions})</span>
                 )}
               </h3>
             </div>
@@ -198,14 +198,14 @@ export default function Menu() {
 
   return (
     <div className="page-transition active">
-      <section className="min-h-screen pt-28 pb-20 bg-dark-bg">
+      <section className="min-h-screen pt-28 pb-20 bg-soft-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-golden mb-6">
                 {t('menuTitle')}
               </h1>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-cozy-brown">
                 {t('menuSubtitle')}
               </p>
             </div>
