@@ -11,38 +11,52 @@ export default function LanguageSwitcher({ className = "", mobile = false }: Lan
 
   if (mobile) {
     return (
-      <div className={`flex flex-col space-y-4 ${className}`}>
-        {SUPPORTED_LANGUAGES.map((lang) => (
-          <button
-            key={lang}
-            onClick={() => changeLanguage(lang)}
-            className={`text-left text-navy-blue hover:text-brick-red transition-colors ${
-              currentLanguage === lang ? 'text-brick-red font-semibold' : ''
-            }`}
-            data-testid={`language-btn-${lang}-mobile`}
-          >
-            <i className="fas fa-globe mr-2 text-mustard-gold"></i> {LANGUAGE_NAMES[lang]}
-          </button>
-        ))}
+      <div className={`bg-warm-beige p-4 rounded-lg border border-olive-green border-opacity-30 ${className}`}>
+        <div className="flex items-center mb-3">
+          <i className="fas fa-globe text-mustard-gold mr-2"></i>
+          <span className="text-sm font-semibold text-navy-blue">Язык / Language</span>
+        </div>
+        <div className="flex flex-col space-y-2">
+          {SUPPORTED_LANGUAGES.map((lang) => (
+            <button
+              key={lang}
+              onClick={() => changeLanguage(lang)}
+              className={`text-left px-3 py-2 rounded-md transition-all duration-200 ${
+                currentLanguage === lang 
+                  ? 'bg-brick-red text-white font-semibold' 
+                  : 'bg-cream-beige text-navy-blue hover:bg-mustard-gold hover:text-white'
+              }`}
+              data-testid={`language-btn-${lang}-mobile`}
+            >
+              {LANGUAGE_NAMES[lang]}
+            </button>
+          ))}
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={`flex items-center space-x-4 ${className}`}>
-      {SUPPORTED_LANGUAGES.map((lang) => (
-        <button
-          key={lang}
-          onClick={() => changeLanguage(lang)}
-          className={`text-navy-blue hover:text-brick-red transition-colors ${
-            currentLanguage === lang ? 'text-brick-red font-semibold' : ''
-          }`}
-          data-testid={`language-btn-${lang}`}
-        >
-          {lang === 'en' && <i className="fas fa-globe mr-1 text-mustard-gold"></i>}
-          {LANGUAGE_NAMES[lang]}
-        </button>
-      ))}
+    <div className={`bg-warm-beige px-4 py-2 rounded-lg border border-olive-green border-opacity-30 ${className}`}>
+      <div className="flex items-center space-x-3">
+        <i className="fas fa-globe text-mustard-gold text-sm"></i>
+        <div className="flex items-center space-x-2">
+          {SUPPORTED_LANGUAGES.map((lang) => (
+            <button
+              key={lang}
+              onClick={() => changeLanguage(lang)}
+              className={`px-2 py-1 rounded text-sm transition-all duration-200 ${
+                currentLanguage === lang 
+                  ? 'bg-brick-red text-white font-semibold' 
+                  : 'bg-cream-beige text-navy-blue hover:bg-mustard-gold hover:text-white'
+              }`}
+              data-testid={`language-btn-${lang}`}
+            >
+              {LANGUAGE_NAMES[lang]}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
