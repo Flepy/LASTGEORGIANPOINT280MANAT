@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { useTranslation } from '@/hooks/useTranslation';
 import LanguageSwitcher from './LanguageSwitcher';
+import logoImage from '@assets/Vector_1754933981235.png';
 
 export default function Header() {
   const [location] = useLocation();
@@ -21,12 +22,12 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-cream-beige bg-opacity-95 backdrop-blur-sm border-b border-olive-green border-opacity-30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream-beige bg-opacity-95 backdrop-blur-sm border-b border-navy-blue border-opacity-30">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center" data-testid="logo-link">
-            <i className="fas fa-utensils text-brick-red text-2xl mr-3"></i>
+            <img src={logoImage} alt="Georgian Point Logo" className="w-8 h-8 mr-3" />
             <h1 className="font-serif text-2xl font-bold text-brick-red">Georgian Point</h1>
           </Link>
 

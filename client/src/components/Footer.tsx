@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { useTranslation } from '@/hooks/useTranslation';
+import logoImage from '@assets/Vector_1754933981235.png';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start mb-4">
-              <i className="fas fa-utensils text-dark-bg text-2xl mr-3"></i>
+              <img src={logoImage} alt="Georgian Point Logo" className="w-8 h-8 mr-3 filter brightness-0 invert" />
               <h3 className="font-serif text-2xl font-bold text-dark-bg">Georgian Point</h3>
             </div>
             <p className="text-dark-bg opacity-80 mb-4">
