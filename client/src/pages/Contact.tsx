@@ -29,7 +29,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start" data-testid="address-info">
-                  <div className="w-12 h-12 bg-mustard-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-brick-red rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <i className="fas fa-map-marker-alt text-white"></i>
                   </div>
                   <div>
@@ -41,7 +41,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start" data-testid="phone-info">
-                  <div className="w-12 h-12 bg-mustard-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-brick-red rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <i className="fas fa-phone text-white"></i>
                   </div>
                   <div>
@@ -53,7 +53,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start" data-testid="hours-info">
-                  <div className="w-12 h-12 bg-mustard-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-brick-red rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <i className="fas fa-clock text-white"></i>
                   </div>
                   <div>

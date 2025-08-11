@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center" data-testid="logo-link">
-            <i className="fas fa-utensils text-mustard-gold text-2xl mr-3"></i>
+            <i className="fas fa-utensils text-brick-red text-2xl mr-3"></i>
             <h1 className="font-serif text-2xl font-bold text-brick-red">Georgian Point</h1>
           </Link>
 

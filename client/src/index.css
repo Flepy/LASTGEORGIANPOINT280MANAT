@@ -35,14 +35,12 @@
   --cream-beige: hsl(35, 45%, 88%);
   --navy-blue: hsl(212, 38%, 35%);
   --olive-green: hsl(88, 20%, 55%);
-  --mustard-gold: hsl(41, 38%, 57%);
   --text-navy: hsl(212, 38%, 25%);
   --background-cream: hsl(35, 45%, 92%);
   --accent-brick: hsl(3, 45%, 45%);
   --soft-cream: hsl(35, 45%, 88%);
   --warm-beige: hsl(35, 35%, 85%);
   --cozy-brown: hsl(212, 38%, 35%);
-  --golden: hsl(41, 38%, 57%);
   
   /* Typography */
   --font-serif: 'Playfair Display', serif;
@@ -100,12 +98,16 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-r from-golden to-golden-dark text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
-    box-shadow: 0 8px 25px hsla(25, 85%, 65%, 0.3);
+    @apply bg-brick-red text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
+    box-shadow: 0 8px 25px rgba(184, 84, 80, 0.3);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--accent-brick);
   }
 
   .btn-secondary {
-    @apply border-2 border-golden text-golden px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-golden hover:text-white;
+    @apply border-2 border-olive-green text-olive-green px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-olive-green hover:text-white;
   }
 
   .nav-link {
@@ -143,18 +145,6 @@
 }
 
 @layer utilities {
-  .text-golden {
-    color: var(--golden);
-  }
-
-  .bg-golden {
-    background-color: var(--golden);
-  }
-
-  .bg-golden-dark {
-    background-color: var(--golden-dark);
-  }
-
   .text-cozy-brown {
     color: var(--cozy-brown);
   }
@@ -173,10 +163,6 @@
 
   .bg-dark-bg {
     background-color: var(--dark-bg);
-  }
-
-  .border-golden {
-    border-color: var(--golden);
   }
 
   .font-serif {
