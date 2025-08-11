@@ -16,12 +16,12 @@ export default function LanguageSwitcher({ className = "", mobile = false }: Lan
           <button
             key={lang}
             onClick={() => changeLanguage(lang)}
-            className={`text-left text-white hover:text-golden transition-colors ${
-              currentLanguage === lang ? 'text-golden' : ''
+            className={`text-left text-navy-blue hover:text-brick-red transition-colors ${
+              currentLanguage === lang ? 'text-brick-red font-semibold' : ''
             }`}
             data-testid={`language-btn-${lang}-mobile`}
           >
-            <i className="fas fa-globe mr-2"></i> {LANGUAGE_NAMES[lang]}
+            <i className="fas fa-globe mr-2 text-mustard-gold"></i> {LANGUAGE_NAMES[lang]}
           </button>
         ))}
       </div>
@@ -34,12 +34,12 @@ export default function LanguageSwitcher({ className = "", mobile = false }: Lan
         <button
           key={lang}
           onClick={() => changeLanguage(lang)}
-          className={`text-white hover:text-golden transition-colors ${
-            currentLanguage === lang ? 'text-golden' : ''
+          className={`text-navy-blue hover:text-brick-red transition-colors ${
+            currentLanguage === lang ? 'text-brick-red font-semibold' : ''
           }`}
           data-testid={`language-btn-${lang}`}
         >
-          {lang === 'en' && <i className="fas fa-globe mr-1"></i>}
+          {lang === 'en' && <i className="fas fa-globe mr-1 text-mustard-gold"></i>}
           {LANGUAGE_NAMES[lang]}
         </button>
       ))}

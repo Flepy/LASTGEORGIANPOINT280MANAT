@@ -109,16 +109,16 @@
   }
 
   .nav-link {
-    color: var(--cozy-brown);
+    color: var(--navy-blue);
     transition: color 0.3s ease;
   }
   
   .nav-link:hover {
-    color: var(--golden);
+    color: var(--brick-red);
   }
 
   .language-active {
-    @apply text-golden;
+    @apply text-brick-red font-semibold;
   }
 
   .gallery-item {
@@ -126,7 +126,7 @@
   }
 
   .mobile-menu {
-    @apply fixed top-20 left-0 w-full h-screen bg-dark-bg z-40 transform -translate-x-full transition-transform duration-300;
+    @apply fixed top-20 left-0 w-full h-screen bg-cream-beige z-40 transform -translate-x-full transition-transform duration-300;
   }
 
   .mobile-menu.active {
