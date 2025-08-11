@@ -22,7 +22,7 @@ export default function Contact() {
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Information */}
-            <div className="bg-cream-beige p-8 rounded-lg border border-olive-green border-opacity-30" data-testid="contact-info-card">
+            <div className="bg-cream-beige p-8 rounded-lg border border-navy-blue border-opacity-30" data-testid="contact-info-card">
               <h2 className="font-serif text-3xl text-brick-red mb-8">
                 {t('contactInformation')}
               </h2>
@@ -65,7 +65,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start" data-testid="cuisine-info">
-                  <div className="w-12 h-12 bg-mustard-gold rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-brick-red rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <i className="fas fa-utensils text-white"></i>
                   </div>
                   <div>
@@ -88,13 +88,13 @@ export default function Contact() {
             </div>
 
             {/* Location Card */}
-            <div className="bg-cream-beige p-8 rounded-lg border border-olive-green border-opacity-30" data-testid="location-card">
+            <div className="bg-cream-beige p-8 rounded-lg border border-navy-blue border-opacity-30" data-testid="location-card">
               <h2 className="font-serif text-3xl text-brick-red mb-8">
                 {t('location')}
               </h2>
 
               <div className="text-center">
-                <div className="w-24 h-24 bg-mustard-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-brick-red rounded-full flex items-center justify-center mx-auto mb-6">
                   <i className="fas fa-map-marker-alt text-white text-3xl"></i>
                 </div>
                 <h3 className="text-2xl text-navy-blue font-semibold mb-2">

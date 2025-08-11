@@ -75,7 +75,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-olive-green border-opacity-30">
+          <div className="mt-8 pt-6 border-t border-navy-blue border-opacity-30">
             <LanguageSwitcher mobile className="space-y-4" />
           </div>
         </div>

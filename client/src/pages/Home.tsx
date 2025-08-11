@@ -22,7 +22,7 @@ export default function Home() {
         }}
       >
         <div className="text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-mustard-gold mb-6">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-brick-red mb-6">
             {t('heroTitle')}
           </h1>
           <p className="text-xl md:text-2xl text-white mb-4">
@@ -50,15 +50,15 @@ export default function Home() {
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white">
             <div className="flex items-center">
-              <i className="fas fa-map-marker-alt text-mustard-gold mr-2"></i>
+              <i className="fas fa-map-marker-alt text-brick-red mr-2"></i>
               <span>Landau 14, Baku, Azerbaijan</span>
             </div>
             <div className="flex items-center">
-              <i className="fas fa-clock text-mustard-gold mr-2"></i>
+              <i className="fas fa-clock text-brick-red mr-2"></i>
               <span>{t('dailyHours')}</span>
             </div>
             <div className="flex items-center">
-              <i className="fas fa-phone text-mustard-gold mr-2"></i>
+              <i className="fas fa-phone text-brick-red mr-2"></i>
               <span>+994 51 700 70 75</span>
             </div>
           </div>
@@ -70,30 +70,30 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center p-8" data-testid="location-card">
-              <div className="w-20 h-20 mx-auto mb-6 bg-golden rounded-full flex items-center justify-center">
-                <i className="fas fa-map-marker-alt text-dark-bg text-2xl"></i>
+              <div className="w-20 h-20 mx-auto mb-6 bg-brick-red rounded-full flex items-center justify-center">
+                <i className="fas fa-map-marker-alt text-white text-2xl"></i>
               </div>
-              <h3 className="font-serif text-2xl text-golden mb-4">
+              <h3 className="font-serif text-2xl text-brick-red mb-4">
                 {t('location')}
               </h3>
               <p className="text-gray-300">Landau 14, Baku, Azerbaijan</p>
             </div>
 
             <div className="text-center p-8" data-testid="about-card">
-              <div className="w-20 h-20 mx-auto mb-6 bg-golden rounded-full flex items-center justify-center">
-                <i className="fas fa-clock text-dark-bg text-2xl"></i>
+              <div className="w-20 h-20 mx-auto mb-6 bg-brick-red rounded-full flex items-center justify-center">
+                <i className="fas fa-clock text-white text-2xl"></i>
               </div>
-              <h3 className="font-serif text-2xl text-golden mb-4">
+              <h3 className="font-serif text-2xl text-brick-red mb-4">
                 {t('aboutUs')}
               </h3>
               <p className="text-gray-300">{t('dailyHours')}</p>
             </div>
 
             <div className="text-center p-8" data-testid="contact-card">
-              <div className="w-20 h-20 mx-auto mb-6 bg-golden rounded-full flex items-center justify-center">
-                <i className="fas fa-phone text-dark-bg text-2xl"></i>
+              <div className="w-20 h-20 mx-auto mb-6 bg-brick-red rounded-full flex items-center justify-center">
+                <i className="fas fa-phone text-white text-2xl"></i>
               </div>
-              <h3 className="font-serif text-2xl text-golden mb-4">
+              <h3 className="font-serif text-2xl text-brick-red mb-4">
                 {t('contactUs')}
               </h3>
               <p className="text-gray-300">+994 51 700 70 75</p>

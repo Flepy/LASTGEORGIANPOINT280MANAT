@@ -34,7 +34,7 @@
   --brick-red: hsl(3, 45%, 52%);
   --cream-beige: hsl(35, 45%, 88%);
   --navy-blue: hsl(212, 38%, 35%);
-  --olive-green: hsl(88, 20%, 55%);
+
   --text-navy: hsl(212, 38%, 25%);
   --background-cream: hsl(35, 45%, 92%);
   --accent-brick: hsl(3, 45%, 45%);
@@ -107,7 +107,7 @@
   }
 
   .btn-secondary {
-    @apply border-2 border-olive-green text-olive-green px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-olive-green hover:text-white;
+    @apply border-2 border-navy-blue text-navy-blue px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:bg-navy-blue hover:text-white;
   }
 
   .nav-link {
