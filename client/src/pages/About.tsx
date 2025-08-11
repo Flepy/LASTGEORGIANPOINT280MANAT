@@ -1,4 +1,5 @@
 import { useTranslation } from '@/hooks/useTranslation';
+import aboutImage from '@assets/2022-11-09_1754913750723.jpg';
 
 export default function About() {
   const { t } = useTranslation();
@@ -16,11 +17,11 @@ export default function About() {
                 {t('aboutDescription')}
               </p>
 
-              {/* Georgian countryside with traditional stone architecture and vineyards */}
+              {/* Georgian Point restaurant exterior */}
               <div className="mb-12">
                 <img 
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
-                  alt="Georgian countryside with traditional architecture" 
+                  src={aboutImage}
+                  alt="Georgian Point restaurant exterior with elegant architecture" 
                   className="rounded-xl shadow-2xl w-full h-auto"
                   data-testid="about-hero-image"
                 />

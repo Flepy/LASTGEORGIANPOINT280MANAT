@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { useTranslation } from '@/hooks/useTranslation';
+import heroBackground from '@assets/IMG_0428_1754913720161.jpg';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -11,7 +12,15 @@ export default function Home() {
   return (
     <div className="page-transition active">
       {/* Hero Section */}
-      <section className="hero-bg min-h-screen flex items-center justify-center">
+      <section 
+        className="min-h-screen flex items-center justify-center relative"
+        style={{
+          background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="text-center px-4 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-golden mb-6">
             {t('heroTitle')}
