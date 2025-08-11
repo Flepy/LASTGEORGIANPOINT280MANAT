@@ -15,21 +15,21 @@ export default function Home() {
       <section 
         className="min-h-screen flex items-center justify-center relative"
         style={{
-          background: `linear-gradient(rgba(0, 0, 0, 0.15), rgba(184, 84, 80, 0.1)), url(${heroBackground})`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
           filter: 'contrast(1.15) brightness(1.1) saturate(1.2)'
         }}
       >
-        <div className="text-center px-4 max-w-4xl mx-auto relative z-10">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-brick-red mb-6 drop-shadow-lg">
+        <div className="text-center px-4 max-w-4xl mx-auto relative z-10 bg-black bg-opacity-40 backdrop-blur-sm rounded-2xl py-12">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
             {t('heroTitle')}
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-4 drop-shadow-md font-semibold">
+          <p className="text-xl md:text-2xl text-cream-beige mb-4 drop-shadow-lg font-semibold" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.7)'}}>
             {t('heroSubtitle')}
           </p>
-          <p className="text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-medium">
+          <p className="text-lg text-cream-beige mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.6)'}}>
             {t('heroDescription')}
           </p>
 
