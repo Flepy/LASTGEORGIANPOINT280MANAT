@@ -20,7 +20,10 @@ export default function LanguageSwitcher({ className = "", mobile = false }: Lan
           {SUPPORTED_LANGUAGES.map((lang) => (
             <button
               key={lang}
-              onClick={() => changeLanguage(lang)}
+              onClick={(e) => {
+                e.preventDefault();
+                changeLanguage(lang);
+              }}
               className={`text-left px-3 py-2 rounded-md transition-all duration-200 ${
                 currentLanguage === lang 
                   ? 'bg-brick-red text-white font-semibold' 
@@ -44,7 +47,10 @@ export default function LanguageSwitcher({ className = "", mobile = false }: Lan
           {SUPPORTED_LANGUAGES.map((lang) => (
             <button
               key={lang}
-              onClick={() => changeLanguage(lang)}
+              onClick={(e) => {
+                e.preventDefault();
+                changeLanguage(lang);
+              }}
               className={`px-2 py-1 rounded text-sm transition-all duration-200 ${
                 currentLanguage === lang 
                   ? 'bg-brick-red text-white font-semibold' 
