@@ -8,6 +8,9 @@ import img6 from '@assets/IMG_0389_1754913322578.jpg';
 import img7 from '@assets/IMG_0371_1754913430302.jpg';
 import img8 from '@assets/IMG_0407_1754913430302.jpg';
 import img9 from '@assets/IMG_0320_1754913430302.jpg';
+import img10 from '@assets/IMG_0401_1754943143988.jpg';
+import img11 from '@assets/IMG_0349_1754943145028.jpg';
+import img12 from '@assets/IMG_0299_1754943145952.jpg';
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -48,6 +51,18 @@ export default function Gallery() {
     {
       src: img9,
       alt: "Gourmet Georgian dish presentation with wine pairing"
+    },
+    {
+      src: img10,
+      alt: "Georgian Point restaurant interior with illuminated G logo and green plant wall"
+    },
+    {
+      src: img11,
+      alt: "Signature Georgian dish with cheese and cherry tomatoes on blue plate"
+    },
+    {
+      src: img12,
+      alt: "Traditional Georgian khinkali dumplings served with spicy sauce"
     }
   ];
 
