@@ -23,10 +23,10 @@ export default function Home() {
         }}
       >
         <div className="text-center px-4 max-w-4xl mx-auto relative z-10 bg-black bg-opacity-40 backdrop-blur-sm rounded-2xl py-12">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
             {t('heroTitle')}
           </h1>
-          <p className="text-xl md:text-2xl text-cream-beige mb-8 drop-shadow-lg font-semibold" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.7)'}}>
+          <p className="text-lg md:text-xl text-cream-beige mb-8 drop-shadow-lg font-semibold" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.7)'}}>
             {t('heroSubtitle')}
           </p>
 
