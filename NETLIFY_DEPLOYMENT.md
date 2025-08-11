@@ -18,7 +18,7 @@
 
 1. **Сборка проекта:**
    ```bash
-   npm run build
+   vite build
    ```
 
 2. **Загрузка файлов:**
@@ -34,7 +34,7 @@
 
 2. **Развертывание:**
    ```bash
-   npm run build
+   vite build
    netlify deploy --dir=dist/public --prod
    ```
 
@@ -55,7 +55,7 @@ dist/public/
 ```toml
 [build]
   publish = "dist/public"
-  command = "npm run build"
+  command = "vite build"
 
 [[redirects]]
   from = "/*"
