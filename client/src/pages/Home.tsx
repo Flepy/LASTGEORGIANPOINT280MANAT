@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { useTranslation } from '@/hooks/useTranslation';
-import heroBackground from '@assets/IMG_0387_1754949067157.webp';
+import heroBackground from '@assets/IMG_0393_1754949124765.jpg';
 
 export default function Home() {
   const { t } = useTranslation();
