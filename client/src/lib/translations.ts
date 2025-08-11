@@ -9,8 +9,8 @@ export const translations = {
     
     // Hero Section
     heroTitle: "Georgian Point",
-    heroSubtitle: "Authentic Georgian Cuisine in the Heart of Baku",
-    heroDescription: "Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining",
+    heroSubtitle: "Authentic Georgian Cuisine",
+    heroDescription: "Traditional recipes and warm hospitality in the heart of Baku.",
     exploreMenu: "Explore Our Menu",
     callToReserve: "Call to Reserve",
     
@@ -85,8 +85,8 @@ export const translations = {
     
     // Hero Section
     heroTitle: "Georgian Point",
-    heroSubtitle: "Аутентичная грузинская кухня в сердце Баку",
-    heroDescription: "Испытайте богатые вкусы и теплое гостеприимство Грузии в нашем изысканном ресторане с приглушенным освещением",
+    heroSubtitle: "Аутентичная грузинская кухня",
+    heroDescription: "Традиционные рецепты и теплое гостеприимство в центре Баку.",
     exploreMenu: "Изучить меню",
     callToReserve: "Позвонить для брони",
     
@@ -160,9 +160,9 @@ export const translations = {
     contact: "Əlaqə",
     
     // Hero Section
-    heroTitle: "Georgian Point",
-    heroSubtitle: "Bakının mərkəzində orijinal gürcü mətbəxi",
-    heroDescription: "Təkmil restoranımızda Gürcüstanın zəngin dadlarını və isti qonaqpərvərliyini yaşayın",
+    heroTitle: "Georgian Point", 
+    heroSubtitle: "Orijinal gürcü mətbəxi",
+    heroDescription: "Bakının mərkəzində ənənəvi reseptlər və isti qonaqpərvərlik.",
     exploreMenu: "Menyumuzu araşdırın",
     callToReserve: "Rezervasiya üçün zəng edin",
     
