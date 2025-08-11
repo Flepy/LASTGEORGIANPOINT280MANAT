@@ -11,15 +11,61 @@ import img9 from '@assets/IMG_0320_1754913430302.jpg';
 import img10 from '@assets/IMG_0401_1754943143988.jpg';
 import img11 from '@assets/IMG_0349_1754943145028.jpg';
 import img12 from '@assets/IMG_0299_1754943145952.jpg';
+import img13 from '@assets/IMG_0357_1754944335424.jpg';
+import img14 from '@assets/IMG_0365_1754944336295.jpg';
+import img15 from '@assets/IMG_0313_1754944337095.jpg';
 
 export default function Gallery() {
   const { t } = useTranslation();
 
   const galleryImages = [
+    // Фотографии еды - в начале
+    {
+      src: img12,
+      alt: "Traditional Georgian khinkali dumplings served with spicy sauce"
+    },
+    {
+      src: img11,
+      alt: "Signature Georgian dish with cheese and cherry tomatoes on blue plate"
+    },
+    {
+      src: img15,
+      alt: "Georgian cheese khachapuri with mushrooms on wooden plate"
+    },
+    {
+      src: img14,
+      alt: "Fresh Georgian salad with herbs being seasoned"
+    },
+    {
+      src: img13,
+      alt: "Georgian dining experience with traditional food and wine"
+    },
+    {
+      src: img9,
+      alt: "Gourmet Georgian dish presentation with wine pairing"
+    },
+    // Интерьер и атмосфера
+    {
+      src: img10,
+      alt: "Georgian Point restaurant interior with illuminated G logo and green plant wall"
+    },
     {
       src: img1,
       alt: "Georgian Point restaurant dining experience with traditional Khachapuri and newspaper"
     },
+    {
+      src: img5,
+      alt: "Georgian Point bar with 'Best Cocktail' neon sign"
+    },
+    {
+      src: img6,
+      alt: "Elegant bar area with hanging wine glasses and red velvet seating"
+    },
+    {
+      src: img8,
+      alt: "Elegant black and white dining room setup with crystal glasses"
+    },
+    // Напитки и дополнительные фото
     {
       src: img2,
       alt: "Fine dining with Georgian wine and playing cards"
@@ -33,36 +79,8 @@ export default function Gallery() {
       alt: "Premium wine collection and cellar"
     },
     {
-      src: img5,
-      alt: "Georgian Point bar with 'Best Cocktail' neon sign"
-    },
-    {
-      src: img6,
-      alt: "Elegant bar area with hanging wine glasses and red velvet seating"
-    },
-    {
       src: img7,
       alt: "Georgian Point restaurant newspaper featuring local cuisine"
-    },
-    {
-      src: img8,
-      alt: "Elegant black and white dining room setup with crystal glasses"
-    },
-    {
-      src: img9,
-      alt: "Gourmet Georgian dish presentation with wine pairing"
-    },
-    {
-      src: img10,
-      alt: "Georgian Point restaurant interior with illuminated G logo and green plant wall"
-    },
-    {
-      src: img11,
-      alt: "Signature Georgian dish with cheese and cherry tomatoes on blue plate"
-    },
-    {
-      src: img12,
-      alt: "Traditional Georgian khinkali dumplings served with spicy sauce"
     }
   ];
 
