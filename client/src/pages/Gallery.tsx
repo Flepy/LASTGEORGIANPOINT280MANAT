@@ -5,28 +5,40 @@ export default function Gallery() {
 
   const galleryImages = [
     {
-      src: "https://pixabay.com/get/g1388cc64156e389295d7e18cb3f86ba45159b4c10180450372b29bdef73ee46fa183af0386e52e8552355b970a335bd6183514046b35e7a3db9be24110f9648a_1280.jpg",
-      alt: "Traditional Georgian feast"
+      src: "/attached_assets/IMG_0305_1754913322578.jpg",
+      alt: "Georgian Point restaurant dining experience with traditional Khachapuri and newspaper"
     },
     {
-      src: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400",
-      alt: "Gourmet burger"
+      src: "/attached_assets/IMG_0330_1754913322578.jpg",
+      alt: "Fine dining with Georgian wine and playing cards"
     },
     {
-      src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400",
-      alt: "Wine celebration"
+      src: "/attached_assets/IMG_0300_1754913322578.jpg",
+      alt: "Signature strawberry cocktail at Georgian Point"
     },
     {
-      src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400",
-      alt: "Restaurant interior"
+      src: "/attached_assets/IMG_0416_1754913322578.jpg",
+      alt: "Premium wine collection and cellar"
     },
     {
-      src: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400",
-      alt: "Seafood paella"
+      src: "/attached_assets/IMG_0400_1754913322578.jpg",
+      alt: "Georgian Point bar with 'Best Cocktail' neon sign"
     },
     {
-      src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400",
-      alt: "Chef plating food"
+      src: "/attached_assets/IMG_0389_1754913322578.jpg",
+      alt: "Elegant bar area with hanging wine glasses and red velvet seating"
+    },
+    {
+      src: "/attached_assets/IMG_0371_1754913430302.jpg",
+      alt: "Georgian Point restaurant newspaper featuring local cuisine"
+    },
+    {
+      src: "/attached_assets/IMG_0407_1754913430302.jpg",
+      alt: "Elegant black and white dining room setup with crystal glasses"
+    },
+    {
+      src: "/attached_assets/IMG_0320_1754913430302.jpg",
+      alt: "Gourmet Georgian dish presentation with wine pairing"
     }
   ];
 
