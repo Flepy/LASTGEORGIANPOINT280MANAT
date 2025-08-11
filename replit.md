@@ -45,6 +45,7 @@ Preferred communication style: Simple, everyday language.
 - **Build Process**: Separate client and server builds with esbuild for server bundling
 - **Environment**: Environment-based configuration with development/production modes
 - **Asset Handling**: Static asset serving with proper caching and optimization
+- **Netlify Deployment**: Ready for static deployment with netlify.toml configuration, SPA routing redirects, and optimized production build
 
 ## External Dependencies
 
