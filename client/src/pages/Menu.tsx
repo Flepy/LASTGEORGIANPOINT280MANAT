@@ -171,25 +171,25 @@ export default function Menu() {
 
   const MenuCategory = ({ title, items, testId }: { title: string; items: MenuItem[]; testId: string }) => (
     <div className="menu-category" data-testid={testId}>
-      <h2 className="font-serif text-3xl text-golden mb-8 text-center">
+      <h2 className="font-serif text-3xl text-brick-red mb-8 text-center">
         {title}
       </h2>
       <div className="space-y-4">
         {items.map((item, index) => (
           <div 
             key={index}
-            className="flex justify-between items-start border-b border-gray-300 pb-3"
+            className="flex justify-between items-start border-b border-olive-green border-opacity-30 pb-3"
             data-testid={`menu-item-${index}`}
           >
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-cozy-brown mb-1">
+              <h3 className="text-lg font-semibold text-navy-blue mb-1">
                 {item.name}
                 {item.portions && (
                   <span className="text-sm text-gray-500 font-normal ml-2">({item.portions})</span>
                 )}
               </h3>
             </div>
-            <span className="text-golden font-bold text-lg ml-4">{item.price}</span>
+            <span className="text-mustard-gold font-bold text-lg ml-4">{item.price}</span>
           </div>
         ))}
       </div>
@@ -198,14 +198,14 @@ export default function Menu() {
 
   return (
     <div className="page-transition active">
-      <section className="min-h-screen pt-28 pb-20 bg-soft-cream">
+      <section className="min-h-screen pt-28 pb-20 bg-background-cream">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="font-serif text-5xl md:text-6xl font-bold text-golden mb-6">
+              <h1 className="font-serif text-5xl md:text-6xl font-bold text-brick-red mb-6">
                 {t('menuTitle')}
               </h1>
-              <p className="text-xl text-cozy-brown">
+              <p className="text-xl text-navy-blue">
                 {t('menuSubtitle')}
               </p>
             </div>

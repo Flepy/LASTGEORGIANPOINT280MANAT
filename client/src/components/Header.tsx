@@ -21,13 +21,13 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-soft-cream bg-opacity-95 backdrop-blur-sm border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-cream-beige bg-opacity-95 backdrop-blur-sm border-b border-olive-green border-opacity-30">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center" data-testid="logo-link">
-            <i className="fas fa-utensils text-golden text-2xl mr-3"></i>
-            <h1 className="font-serif text-2xl font-bold text-golden">Georgian Point</h1>
+            <i className="fas fa-utensils text-mustard-gold text-2xl mr-3"></i>
+            <h1 className="font-serif text-2xl font-bold text-brick-red">Georgian Point</h1>
           </Link>
 
           {/* Desktop Navigation */}
@@ -36,7 +36,7 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`nav-link ${location === item.path ? 'text-golden' : ''}`}
+                className={`nav-link ${location === item.path ? 'text-brick-red' : ''}`}
                 data-testid={`nav-link-${item.path.slice(1) || 'home'}`}
               >
                 {item.label}
@@ -49,7 +49,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden text-cozy-brown"
+            className="lg:hidden text-navy-blue"
             onClick={toggleMobileMenu}
             data-testid="mobile-menu-toggle"
           >
@@ -66,7 +66,7 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={item.path}
-                className="text-cozy-brown text-xl hover:text-golden transition-colors"
+                className="text-navy-blue text-xl hover:text-brick-red transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 data-testid={`mobile-nav-link-${item.path.slice(1) || 'home'}`}
               >

@@ -15,14 +15,14 @@ export default function Home() {
       <section 
         className="min-h-screen flex items-center justify-center relative"
         style={{
-          background: `linear-gradient(rgba(139, 69, 19, 0.4), rgba(139, 69, 19, 0.4)), url(${heroBackground})`,
+          background: `linear-gradient(rgba(58, 90, 122, 0.4), rgba(122, 148, 113, 0.3)), url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
       >
         <div className="text-center px-4 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-golden mb-6">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-mustard-gold mb-6">
             {t('heroTitle')}
           </h1>
           <p className="text-xl md:text-2xl text-white mb-4">
@@ -50,15 +50,15 @@ export default function Home() {
 
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white">
             <div className="flex items-center">
-              <i className="fas fa-map-marker-alt text-golden mr-2"></i>
+              <i className="fas fa-map-marker-alt text-mustard-gold mr-2"></i>
               <span>Landau 14, Baku, Azerbaijan</span>
             </div>
             <div className="flex items-center">
-              <i className="fas fa-clock text-golden mr-2"></i>
+              <i className="fas fa-clock text-mustard-gold mr-2"></i>
               <span>{t('dailyHours')}</span>
             </div>
             <div className="flex items-center">
-              <i className="fas fa-phone text-golden mr-2"></i>
+              <i className="fas fa-phone text-mustard-gold mr-2"></i>
               <span>+994 51 700 70 75</span>
             </div>
           </div>

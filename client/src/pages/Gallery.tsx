@@ -53,13 +53,13 @@ export default function Gallery() {
 
   return (
     <div className="page-transition active">
-      <section className="min-h-screen pt-28 pb-20 bg-soft-cream">
+      <section className="min-h-screen pt-28 pb-20 bg-background-cream">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-golden mb-6">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-brick-red mb-6">
               {t('galleryTitle')}
             </h1>
-            <p className="text-xl text-cozy-brown">
+            <p className="text-xl text-navy-blue">
               {t('gallerySubtitle')}
             </p>
           </div>

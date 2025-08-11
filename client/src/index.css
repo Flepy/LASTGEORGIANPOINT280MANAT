@@ -30,17 +30,19 @@
   --chart-4: hsl(280, 65%, 60%);
   --chart-5: hsl(340, 75%, 55%);
   
-  /* Custom Colors - Family Friendly */
-  --warm-orange: hsl(25, 85%, 65%);
-  --soft-cream: hsl(45, 40%, 96%);
-  --warm-beige: hsl(35, 20%, 90%);
-  --cozy-brown: hsl(25, 30%, 25%);
-  --accent-terracotta: hsl(15, 60%, 55%);
-  --text-dark: hsl(25, 30%, 15%);
-  --golden: hsl(25, 85%, 65%);
-  --golden-dark: hsl(25, 60%, 45%);
-  --dark-bg: hsl(45, 40%, 96%);
-  --dark-overlay: hsla(25, 30%, 15%, 0.6);
+  /* Custom Colors - From New Palette */
+  --brick-red: hsl(3, 45%, 52%);
+  --cream-beige: hsl(35, 45%, 88%);
+  --navy-blue: hsl(212, 38%, 35%);
+  --olive-green: hsl(88, 20%, 55%);
+  --mustard-gold: hsl(41, 38%, 57%);
+  --text-navy: hsl(212, 38%, 25%);
+  --background-cream: hsl(35, 45%, 92%);
+  --accent-brick: hsl(3, 45%, 45%);
+  --soft-cream: hsl(35, 45%, 88%);
+  --warm-beige: hsl(35, 35%, 85%);
+  --cozy-brown: hsl(212, 38%, 35%);
+  --golden: hsl(41, 38%, 57%);
   
   /* Typography */
   --font-serif: 'Playfair Display', serif;
