@@ -1,43 +1,52 @@
 import { useTranslation } from '@/hooks/useTranslation';
+import img1 from '@assets/IMG_0305_1754913322578.jpg';
+import img2 from '@assets/IMG_0330_1754913322578.jpg';
+import img3 from '@assets/IMG_0300_1754913322578.jpg';
+import img4 from '@assets/IMG_0416_1754913322578.jpg';
+import img5 from '@assets/IMG_0400_1754913322578.jpg';
+import img6 from '@assets/IMG_0389_1754913322578.jpg';
+import img7 from '@assets/IMG_0371_1754913430302.jpg';
+import img8 from '@assets/IMG_0407_1754913430302.jpg';
+import img9 from '@assets/IMG_0320_1754913430302.jpg';
 
 export default function Gallery() {
   const { t } = useTranslation();
 
   const galleryImages = [
     {
-      src: "/attached_assets/IMG_0305_1754913322578.jpg",
+      src: img1,
       alt: "Georgian Point restaurant dining experience with traditional Khachapuri and newspaper"
     },
     {
-      src: "/attached_assets/IMG_0330_1754913322578.jpg",
+      src: img2,
       alt: "Fine dining with Georgian wine and playing cards"
     },
     {
-      src: "/attached_assets/IMG_0300_1754913322578.jpg",
+      src: img3,
       alt: "Signature strawberry cocktail at Georgian Point"
     },
     {
-      src: "/attached_assets/IMG_0416_1754913322578.jpg",
+      src: img4,
       alt: "Premium wine collection and cellar"
     },
     {
-      src: "/attached_assets/IMG_0400_1754913322578.jpg",
+      src: img5,
       alt: "Georgian Point bar with 'Best Cocktail' neon sign"
     },
     {
-      src: "/attached_assets/IMG_0389_1754913322578.jpg",
+      src: img6,
       alt: "Elegant bar area with hanging wine glasses and red velvet seating"
     },
     {
-      src: "/attached_assets/IMG_0371_1754913430302.jpg",
+      src: img7,
       alt: "Georgian Point restaurant newspaper featuring local cuisine"
     },
     {
-      src: "/attached_assets/IMG_0407_1754913430302.jpg",
+      src: img8,
       alt: "Elegant black and white dining room setup with crystal glasses"
     },
     {
-      src: "/attached_assets/IMG_0320_1754913430302.jpg",
+      src: img9,
       alt: "Gourmet Georgian dish presentation with wine pairing"
     }
   ];
