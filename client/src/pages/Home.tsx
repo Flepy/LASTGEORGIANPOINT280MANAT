@@ -26,11 +26,8 @@ export default function Home() {
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
             {t('heroTitle')}
           </h1>
-          <p className="text-xl md:text-2xl text-cream-beige mb-4 drop-shadow-lg font-semibold" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.7)'}}>
+          <p className="text-xl md:text-2xl text-cream-beige mb-8 drop-shadow-lg font-semibold" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.7)'}}>
             {t('heroSubtitle')}
-          </p>
-          <p className="text-lg text-cream-beige mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-medium" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.6)'}}>
-            {t('heroDescription')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
