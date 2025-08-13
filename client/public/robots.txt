@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Important pages
 Sitemap: https://georgianpoint.netlify.app/sitemap.xml
+
+# Allow crawling of all content for Georgian Point restaurant
+Allow: /menu
+Allow: /about
+Allow: /gallery  
+Allow: /contact
+
+# Improve crawling for "Georgian Point" with space
+# This helps search engines understand the brand name properly

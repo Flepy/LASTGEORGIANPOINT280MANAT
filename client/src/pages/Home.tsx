@@ -11,6 +11,12 @@ export default function Home() {
 
   return (
     <div className="page-transition active">
+      {/* SEO optimization for "Georgian Point" search */}
+      <div style={{display: 'none', visibility: 'hidden'}}>
+        <h1>Georgian Point Restaurant Baku</h1>
+        <p>Georgian Point authentic Georgian cuisine restaurant in Baku Azerbaijan</p>
+        <span>Georgian Point menu, Georgian Point restaurant, Georgian Point Baku</span>
+      </div>
       {/* Hero Section */}
       <section 
         className="min-h-screen flex items-center justify-center relative"
