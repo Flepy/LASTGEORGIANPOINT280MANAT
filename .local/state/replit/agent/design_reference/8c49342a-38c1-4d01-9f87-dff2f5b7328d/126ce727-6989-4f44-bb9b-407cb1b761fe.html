@@ -1,0 +1,623 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgian Point - Authentic Georgian Cuisine in Baku</title>
+    <meta name="description" content="Experience authentic Georgian hospitality and cuisine in the heart of Baku. Sophisticated dining with traditional flavors.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'golden': '#D4AF37',
+                        'golden-dark': '#B8860B',
+                        'dark-bg': '#1a1a1a',
+                        'dark-overlay': 'rgba(0,0,0,0.6)'
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'cinzel': ['Cinzel', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .section-bg {
+            background-color: #1a1a1a;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(184, 134, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .golden-text-shadow {
+            text-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+        }
+        
+        .hover-golden {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-golden:hover {
+            color: #D4AF37;
+            transform: translateY(-2px);
+        }
+        
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-white font-inter overflow-x-hidden">
+    
+    <!-- Navigation Header -->
+    <header class="fixed top-0 w-full z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm border-b border-golden border-opacity-20">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-cinzel font-semibold text-golden">Georgian Point</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover-golden" data-translate="nav.home">Home</a>
+                    <a href="#about" class="hover-golden" data-translate="nav.about">About Us</a>
+                    <a href="#menu" class="hover-golden" data-translate="nav.menu">Menu</a>
+                    <a href="#gallery" class="hover-golden" data-translate="nav.gallery">Gallery</a>
+                    <a href="#contact" class="hover-golden" data-translate="nav.contact">Contact Us</a>
+                </div>
+                
+                <!-- Language Switcher & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <button id="languageBtn" class="flex items-center space-x-2 text-golden hover:text-golden-dark transition-colors">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">English</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div id="languageMenu" class="absolute top-full right-0 mt-2 bg-dark-bg border border-golden border-opacity-20 rounded-lg shadow-lg hidden min-w-[120px]">
+                            <a href="#" class="block px-4 py-2 hover:bg-golden hover:bg-opacity-20 transition-colors" data-lang="en">English</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-golden hover:bg-opacity-20 transition-colors" data-lang="ru">Русский</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-golden hover:bg-opacity-20 transition-colors" data-lang="az">Azərbaycan</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuBtn" class="md:hidden text-golden">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="mobile-menu md:hidden fixed top-0 left-0 w-64 h-full bg-dark-bg border-r border-golden border-opacity-20 z-40">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-xl font-cinzel text-golden">Menu</h2>
+                    <button id="closeMobileMenu" class="text-golden">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <nav class="space-y-4">
+                    <a href="#home" class="block py-2 hover-golden" data-translate="nav.home">Home</a>
+                    <a href="#about" class="block py-2 hover-golden" data-translate="nav.about">About Us</a>
+                    <a href="#menu" class="block py-2 hover-golden" data-translate="nav.menu">Menu</a>
+                    <a href="#gallery" class="block py-2 hover-golden" data-translate="nav.gallery">Gallery</a>
+                    <a href="#contact" class="block py-2 hover-golden" data-translate="nav.contact">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-cinzel font-bold text-golden mb-6 golden-text-shadow" data-translate="hero.title">Georgian Point</h1>
+            <p class="text-xl md:text-2xl font-playfair mb-4 max-w-3xl mx-auto" data-translate="hero.subtitle">Authentic Georgian Cuisine in the Heart of Baku</p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90" data-translate="hero.description">Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining</p>
+            
+            <!-- Restaurant Info -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt text-golden"></i>
+                    <span data-translate="hero.location">Landau 14, Baku, Azerbaijan</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-clock text-golden"></i>
+                    <span data-translate="hero.hours">Daily 12:00 - 01:00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-golden"></i>
+                    <span>+994 50 997 06 06</span>
+                </div>
+            </div>
+            
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-golden hover:bg-golden-dark text-dark-bg px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105" data-translate="hero.cta.menu">
+                    Explore Our Menu
+                </button>
+                <button class="border-2 border-golden text-golden hover:bg-golden hover:text-dark-bg px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105" data-translate="hero.cta.reserve">
+                    <i class="fas fa-phone mr-2"></i>Call to Reserve
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards Section -->
+    <section class="section-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Location Card -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-golden bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-golden text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-semibold text-golden mb-4" data-translate="info.location.title">Location</h3>
+                    <p data-translate="info.location.address">Landau 14, Baku, Azerbaijan</p>
+                </div>
+                
+                <!-- Hours Card -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-golden bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-golden text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-semibold text-golden mb-4" data-translate="info.hours.title">About Us</h3>
+                    <p data-translate="info.hours.time">Daily 12:00 - 01:00</p>
+                </div>
+                
+                <!-- Contact Card -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-golden bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone text-golden text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-semibold text-golden mb-4" data-translate="info.contact.title">Contact Us</h3>
+                    <p>+994 50 997 06 06</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-golden mb-6" data-translate="gallery.title">Gallery</h2>
+                <p class="text-lg opacity-90 max-w-2xl mx-auto" data-translate="gallery.subtitle">Experience the atmosphere and cuisine that awaits you</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Traditional Georgian Plate -->
+                <div class="gallery-item rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Traditional Georgian cuisine platter" class="w-full h-64 object-cover" />
+                </div>
+                
+                <!-- Gourmet Burger -->
+                <div class="gallery-item rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Gourmet burger with sesame bun" class="w-full h-64 object-cover" />
+                </div>
+                
+                <!-- Wine Tasting -->
+                <div class="gallery-item rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Wine tasting with glasses and food" class="w-full h-64 object-cover" />
+                </div>
+                
+                <!-- Restaurant Interior -->
+                <div class="gallery-item rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Elegant restaurant interior with warm lighting" class="w-full h-64 object-cover" />
+                </div>
+                
+                <!-- Signature Dish -->
+                <div class="gallery-item rounded-xl overflow-hidden">
+                    <img src="https://pixabay.com/get/g2923e1856c5dacea1bfd54c95556034f9abb821b9df1638d90f6c0ff78c4d752164fa195f501a7b49c341570009decae5ccaad9f71254a4146ed18ead777dc6b_1280.jpg" alt="Signature dish with orange sauce and herbs" class="w-full h-64 object-cover" />
+                </div>
+                
+                <!-- Fine Dining Experience -->
+                <div class="gallery-item rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Fine dining experience with professional service" class="w-full h-64 object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-bg py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-golden mb-6" data-translate="contact.title">Visit Us</h2>
+                <p class="text-lg opacity-90 max-w-2xl mx-auto" data-translate="contact.subtitle">Experience authentic Georgian hospitality in the heart of Baku</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Contact Information -->
+                <div class="border border-golden border-opacity-30 rounded-xl p-8 bg-golden bg-opacity-5">
+                    <h3 class="text-2xl font-playfair font-semibold text-golden mb-6" data-translate="contact.info.title">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-golden"></i>
+                            <span data-translate="contact.info.address">Landau 14, Baku, Azerbaijan</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-golden"></i>
+                            <span>+994 50 997 06 06</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-golden"></i>
+                            <span data-translate="contact.info.hours">Daily: 12:00 - 01:00</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-utensils text-golden"></i>
+                            <span data-translate="contact.info.cuisine">Authentic Georgian Cuisine</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full mt-6 bg-golden hover:bg-golden-dark text-dark-bg px-6 py-3 rounded-lg font-semibold transition-all duration-300" data-translate="contact.cta.reserve">
+                        <i class="fas fa-phone mr-2"></i>Call for Quick Reservation
+                    </button>
+                </div>
+                
+                <!-- Location -->
+                <div class="border border-golden border-opacity-30 rounded-xl p-8 bg-golden bg-opacity-5">
+                    <h3 class="text-2xl font-playfair font-semibold text-golden mb-6" data-translate="contact.location.title">Location</h3>
+                    <div class="bg-golden bg-opacity-20 rounded-lg p-8 text-center">
+                        <div class="w-16 h-16 bg-golden bg-opacity-30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-golden text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-golden mb-2" data-translate="contact.location.findus">Find Us in Baku</h4>
+                        <p class="mb-2" data-translate="contact.location.address">Landau 14, Baku, Azerbaijan</p>
+                        <p class="text-sm opacity-75" data-translate="contact.location.access">In the heart of Baku, easily accessible by public transport</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-golden border-opacity-30 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Brand & Description -->
+                <div>
+                    <h3 class="text-2xl font-cinzel font-semibold text-golden mb-4">Georgian Point</h3>
+                    <p class="opacity-90 mb-6" data-translate="footer.description">Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-golden hover:text-golden-dark transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-golden hover:text-golden-dark transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-golden hover:text-golden-dark transition-colors">
+                            <i class="fab fa-tripadvisor text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-playfair font-semibold text-golden mb-6" data-translate="footer.quicklinks.title">Quick Links</h4>
+                    <nav class="space-y-3">
+                        <a href="#menu" class="block hover-golden" data-translate="footer.quicklinks.menu">Menu</a>
+                        <a href="#gallery" class="block hover-golden" data-translate="footer.quicklinks.gallery">Gallery</a>
+                        <a href="#contact" class="block hover-golden" data-translate="footer.quicklinks.contact">Contact Us</a>
+                    </nav>
+                </div>
+                
+                <!-- Hours & Location -->
+                <div>
+                    <h4 class="text-xl font-playfair font-semibold text-golden mb-6" data-translate="footer.info.title">Hours & Location</h4>
+                    <div class="space-y-3">
+                        <p data-translate="footer.info.address">Landau 14, Baku, Azerbaijan</p>
+                        <p data-translate="footer.info.hours">Daily 12:00 - 01:00</p>
+                        <p>+994 50 997 06 06</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-golden border-opacity-20 mt-12 pt-8 text-center">
+                <p class="opacity-75" data-translate="footer.copyright">© 2024 Georgian Point. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Translation data
+        const translations = {
+            en: {
+                "nav.home": "Home",
+                "nav.about": "About Us", 
+                "nav.menu": "Menu",
+                "nav.gallery": "Gallery",
+                "nav.contact": "Contact Us",
+                "hero.title": "Georgian Point",
+                "hero.subtitle": "Authentic Georgian Cuisine in the Heart of Baku",
+                "hero.description": "Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining",
+                "hero.location": "Landau 14, Baku, Azerbaijan",
+                "hero.hours": "Daily 12:00 - 01:00",
+                "hero.cta.menu": "Explore Our Menu",
+                "hero.cta.reserve": "Call to Reserve",
+                "info.location.title": "Location",
+                "info.location.address": "Landau 14, Baku, Azerbaijan",
+                "info.hours.title": "About Us",
+                "info.hours.time": "Daily 12:00 - 01:00",
+                "info.contact.title": "Contact Us",
+                "gallery.title": "Gallery",
+                "gallery.subtitle": "Experience the atmosphere and cuisine that awaits you",
+                "contact.title": "Visit Us",
+                "contact.subtitle": "Experience authentic Georgian hospitality in the heart of Baku",
+                "contact.info.title": "Contact Information",
+                "contact.info.address": "Landau 14, Baku, Azerbaijan",
+                "contact.info.hours": "Daily: 12:00 - 01:00",
+                "contact.info.cuisine": "Authentic Georgian Cuisine",
+                "contact.cta.reserve": "Call for Quick Reservation",
+                "contact.location.title": "Location",
+                "contact.location.findus": "Find Us in Baku",
+                "contact.location.address": "Landau 14, Baku, Azerbaijan",
+                "contact.location.access": "In the heart of Baku, easily accessible by public transport",
+                "footer.description": "Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality.",
+                "footer.quicklinks.title": "Quick Links",
+                "footer.quicklinks.menu": "Menu",
+                "footer.quicklinks.gallery": "Gallery", 
+                "footer.quicklinks.contact": "Contact Us",
+                "footer.info.title": "Hours & Location",
+                "footer.info.address": "Landau 14, Baku, Azerbaijan",
+                "footer.info.hours": "Daily 12:00 - 01:00",
+                "footer.copyright": "© 2024 Georgian Point. All rights reserved."
+            },
+            ru: {
+                "nav.home": "Главная",
+                "nav.about": "О нас", 
+                "nav.menu": "Меню",
+                "nav.gallery": "Галерея",
+                "nav.contact": "Контакты",
+                "hero.title": "Georgian Point",
+                "hero.subtitle": "Аутентичная грузинская кухня в сердце Баку",
+                "hero.description": "Ощутите богатые вкусы и теплое гостеприимство Грузии в нашем изысканном ресторане с приглушенным освещением, бархатными текстурами и высоким уровнем обслуживания",
+                "hero.location": "Ландау 14, Баку, Азербайджан",
+                "hero.hours": "Ежедневно 12:00 - 01:00",
+                "hero.cta.menu": "Изучить меню",
+                "hero.cta.reserve": "Позвонить для бронирования",
+                "info.location.title": "Местоположение",
+                "info.location.address": "Ландау 14, Баку, Азербайджан",
+                "info.hours.title": "О нас",
+                "info.hours.time": "Ежедневно 12:00 - 01:00",
+                "info.contact.title": "Контакты",
+                "gallery.title": "Галерея",
+                "gallery.subtitle": "Ощутите атмосферу и кухню, которая вас ждет",
+                "contact.title": "Посетите нас",
+                "contact.subtitle": "Ощутите аутентичное грузинское гостеприимство в сердце Баку",
+                "contact.info.title": "Контактная информация",
+                "contact.info.address": "Ландау 14, Баку, Азербайджан",
+                "contact.info.hours": "Ежедневно: 12:00 - 01:00",
+                "contact.info.cuisine": "Аутентичная грузинская кухня",
+                "contact.cta.reserve": "Позвонить для быстрого бронирования",
+                "contact.location.title": "Местоположение",
+                "contact.location.findus": "Найдите нас в Баку",
+                "contact.location.address": "Ландау 14, Баку, Азербайджан",
+                "contact.location.access": "В сердце Баку, легко добраться общественным транспортом",
+                "footer.description": "Привносим аутентичные грузинские вкусы в Баку с изысканной подачей и теплым гостеприимством.",
+                "footer.quicklinks.title": "Быстрые ссылки",
+                "footer.quicklinks.menu": "Меню",
+                "footer.quicklinks.gallery": "Галерея", 
+                "footer.quicklinks.contact": "Контакты",
+                "footer.info.title": "Часы работы и местоположение",
+                "footer.info.address": "Ландау 14, Баку, Азербайджан",
+                "footer.info.hours": "Ежедневно 12:00 - 01:00",
+                "footer.copyright": "© 2024 Georgian Point. Все права защищены."
+            },
+            az: {
+                "nav.home": "Əsas səhifə",
+                "nav.about": "Haqqımızda", 
+                "nav.menu": "Menyu",
+                "nav.gallery": "Qalereya",
+                "nav.contact": "Əlaqə",
+                "hero.title": "Georgian Point",
+                "hero.subtitle": "Bakının mərkəzində orijinal gürcü mətbəxi",
+                "hero.description": "Gürcüstanın zəngin dadlarını və isti qonaqpərvərliyini zərif teksturalar və yüksək səviyyəli xidmətlə təqdim edən nəfis restoranımızda yaşayın",
+                "hero.location": "Landau 14, Bakı, Azərbaycan",
+                "hero.hours": "Hər gün 12:00 - 01:00",
+                "hero.cta.menu": "Menyumuzu kəşf edin",
+                "hero.cta.reserve": "Rezervasiya üçün zəng edin",
+                "info.location.title": "Yer",
+                "info.location.address": "Landau 14, Bakı, Azərbaycan",
+                "info.hours.title": "Haqqımızda",
+                "info.hours.time": "Hər gün 12:00 - 01:00",
+                "info.contact.title": "Əlaqə",
+                "gallery.title": "Qalereya",
+                "gallery.subtitle": "Sizi gözləyən atmosfer və mətbəxi yaşayın",
+                "contact.title": "Bizi ziyarət edin",
+                "contact.subtitle": "Bakının mərkəzində orijinal gürcü qonaqpərvərliyini yaşayın",
+                "contact.info.title": "Əlaqə məlumatları",
+                "contact.info.address": "Landau 14, Bakı, Azərbaycan",
+                "contact.info.hours": "Hər gün: 12:00 - 01:00",
+                "contact.info.cuisine": "Orijinal gürcü mətbəxi",
+                "contact.cta.reserve": "Sürətli rezervasiya üçün zəng edin",
+                "contact.location.title": "Yer",
+                "contact.location.findus": "Bizi Bakıda tapın",
+                "contact.location.address": "Landau 14, Bakı, Azərbaycan",
+                "contact.location.access": "Bakının mərkəzində, ictimai nəqliyyatla asanlıqla çatmaq olar",
+                "footer.description": "Nəfis təqdimat və isti qonaqpərvərliklə orijinal gürcü dadlarını Bakıya gətiririk.",
+                "footer.quicklinks.title": "Sürətli keçidlər",
+                "footer.quicklinks.menu": "Menyu",
+                "footer.quicklinks.gallery": "Qalereya", 
+                "footer.quicklinks.contact": "Əlaqə",
+                "footer.info.title": "İş saatları və yer",
+                "footer.info.address": "Landau 14, Bakı, Azərbaycan",
+                "footer.info.hours": "Hər gün 12:00 - 01:00",
+                "footer.copyright": "© 2024 Georgian Point. Bütün hüquqlar qorunur."
+            }
+        };
+
+        // Language functionality
+        (function() {
+            let currentLanguage = 'en';
+            
+            const languageBtn = document.getElementById('languageBtn');
+            const languageMenu = document.getElementById('languageMenu');
+            const currentLangSpan = document.getElementById('currentLang');
+            const languageOptions = document.querySelectorAll('[data-lang]');
+            
+            // Toggle language menu
+            languageBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                languageMenu.classList.toggle('hidden');
+            });
+            
+            // Close language menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!languageBtn.contains(e.target) && !languageMenu.contains(e.target)) {
+                    languageMenu.classList.add('hidden');
+                }
+            });
+            
+            // Handle language selection
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    changeLanguage(selectedLang);
+                    languageMenu.classList.add('hidden');
+                });
+            });
+            
+            // Change language function
+            function changeLanguage(lang) {
+                currentLanguage = lang;
+                
+                // Update current language display
+                const langNames = {
+                    'en': 'English',
+                    'ru': 'Русский', 
+                    'az': 'Azərbaycan'
+                };
+                currentLangSpan.textContent = langNames[lang];
+                
+                // Update all translated elements
+                const translatableElements = document.querySelectorAll('[data-translate]');
+                translatableElements.forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (translations[lang] && translations[lang][key]) {
+                        element.textContent = translations[lang][key];
+                    }
+                });
+                
+                // Update document language
+                document.documentElement.lang = lang;
+            }
+        })();
+
+        // Mobile menu functionality
+        (function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const closeMobileMenu = document.getElementById('closeMobileMenu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+            
+            // Open mobile menu
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // Close mobile menu
+            function closeMobileMenuFunc() {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+            
+            // Close menu when clicking on links
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenuFunc);
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    if (mobileMenu.classList.contains('active')) {
+                        closeMobileMenuFunc();
+                    }
+                }
+            });
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const headerOffset = 80;
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Header background on scroll
+        (function() {
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('bg-opacity-100');
+                } else {
+                    header.classList.remove('bg-opacity-100');
+                }
+            });
+        })();
+
+        // TODO: Implement business logic for:
+        // - Reservation system integration
+        // - Menu API calls  
+        // - Contact form submission
+        // - Social media sharing
+        // - Analytics tracking
+        // - SEO meta tag updates based on language
+    </script>
+</body>
+</html>

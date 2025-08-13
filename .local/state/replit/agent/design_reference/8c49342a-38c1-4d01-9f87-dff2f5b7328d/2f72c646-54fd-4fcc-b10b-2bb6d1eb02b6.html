@@ -1,0 +1,865 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgian Point - Authentic Georgian Cuisine in Baku</title>
+    <meta name="description" content="Experience authentic Georgian cuisine in the heart of Baku. Sophisticated dining with warm hospitality.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'golden': '#D4AF37',
+                        'golden-dark': '#B8860B',
+                        'dark-bg': '#1a1a1a',
+                        'dark-overlay': 'rgba(0, 0, 0, 0.6)'
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { 
+            background-color: #1a1a1a; 
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .language-active {
+            color: #D4AF37 !important;
+        }
+        .nav-link:hover {
+            color: #D4AF37;
+            transition: color 0.3s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37, #B8860B);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        .btn-secondary {
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #D4AF37;
+            color: #1a1a1a;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-white">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <i class="fas fa-utensils text-golden text-2xl mr-3"></i>
+                    <h1 class="font-serif text-2xl font-bold text-golden">Georgian Point</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-white hover:text-golden transition-colors" onclick="showPage('home')">
+                        <span data-en="Home" data-ru="Главная" data-az="Ana Səhifə">Home</span>
+                    </a>
+                    <a href="#" class="nav-link text-white hover:text-golden transition-colors" onclick="showPage('about')">
+                        <span data-en="About Us" data-ru="О нас" data-az="Haqqımızda">About Us</span>
+                    </a>
+                    <a href="#" class="nav-link text-white hover:text-golden transition-colors" onclick="showPage('menu')">
+                        <span data-en="Menu" data-ru="Меню" data-az="Menyu">Menu</span>
+                    </a>
+                    <a href="#" class="nav-link text-white hover:text-golden transition-colors" onclick="showPage('gallery')">
+                        <span data-en="Gallery" data-ru="Галерея" data-az="Qalereya">Gallery</span>
+                    </a>
+                    <a href="#" class="nav-link text-white hover:text-golden transition-colors" onclick="showPage('contact')">
+                        <span data-en="Contact Us" data-ru="Контакты" data-az="Əlaqə">Contact Us</span>
+                    </a>
+                </nav>
+                
+                <!-- Language Switcher -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button onclick="changeLanguage('en')" class="language-btn text-white hover:text-golden transition-colors language-active" data-lang="en">
+                        <i class="fas fa-globe mr-1"></i> English
+                    </button>
+                    <button onclick="changeLanguage('ru')" class="language-btn text-white hover:text-golden transition-colors" data-lang="ru">
+                        Русский
+                    </button>
+                    <button onclick="changeLanguage('az')" class="language-btn text-white hover:text-golden transition-colors" data-lang="az">
+                        Azərbaycan
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu lg:hidden fixed top-20 left-0 w-full h-screen bg-dark-bg z-40">
+            <div class="p-6">
+                <nav class="flex flex-col space-y-6">
+                    <a href="#" class="text-white text-xl" onclick="showPage('home'); toggleMobileMenu();">
+                        <span data-en="Home" data-ru="Главная" data-az="Ana Səhifə">Home</span>
+                    </a>
+                    <a href="#" class="text-white text-xl" onclick="showPage('about'); toggleMobileMenu();">
+                        <span data-en="About Us" data-ru="О нас" data-az="Haqqımızda">About Us</span>
+                    </a>
+                    <a href="#" class="text-white text-xl" onclick="showPage('menu'); toggleMobileMenu();">
+                        <span data-en="Menu" data-ru="Меню" data-az="Menyu">Menu</span>
+                    </a>
+                    <a href="#" class="text-white text-xl" onclick="showPage('gallery'); toggleMobileMenu();">
+                        <span data-en="Gallery" data-ru="Галерея" data-az="Qalereya">Gallery</span>
+                    </a>
+                    <a href="#" class="text-white text-xl" onclick="showPage('contact'); toggleMobileMenu();">
+                        <span data-en="Contact Us" data-ru="Контакты" data-az="Əlaqə">Contact Us</span>
+                    </a>
+                </nav>
+                
+                <div class="mt-8 pt-6 border-t border-gray-700">
+                    <div class="flex flex-col space-y-4">
+                        <button onclick="changeLanguage('en'); toggleMobileMenu();" class="language-btn text-left text-white language-active" data-lang="en">
+                            <i class="fas fa-globe mr-2"></i> English
+                        </button>
+                        <button onclick="changeLanguage('ru'); toggleMobileMenu();" class="language-btn text-left text-white" data-lang="ru">
+                            <i class="fas fa-globe mr-2"></i> Русский
+                        </button>
+                        <button onclick="changeLanguage('az'); toggleMobileMenu();" class="language-btn text-left text-white" data-lang="az">
+                            <i class="fas fa-globe mr-2"></i> Azərbaycan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <!-- Modern restaurant interior with elegant dining room setup -->
+        <section class="hero-bg min-h-screen flex items-center justify-center">
+            <div class="text-center px-4 max-w-4xl mx-auto">
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-golden mb-6">
+                    Georgian Point
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-4">
+                    <span data-en="Authentic Georgian Cuisine in the Heart of Baku" 
+                          data-ru="Аутентичная грузинская кухня в сердце Баку" 
+                          data-az="Bakının mərkəzində orijinal gürcü mətbəxi">
+                        Authentic Georgian Cuisine in the Heart of Baku
+                    </span>
+                </p>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    <span data-en="Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining" 
+                          data-ru="Испытайте богатые вкусы и теплое гостеприимство Грузии в нашем изысканном ресторане с приглушенным освещением" 
+                          data-az="Təkmil restoranımızda Gürcüstanın zəngin dadlarını və isti qonaqpərvərliyini yaşayın">
+                        Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining
+                    </span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button onclick="showPage('menu')" class="btn-primary px-8 py-4 rounded-lg font-semibold text-white">
+                        <span data-en="Explore Our Menu" data-ru="Изучить меню" data-az="Menyumuzu araşdırın">Explore Our Menu</span>
+                    </button>
+                    <button onclick="makeReservation()" class="btn-secondary px-8 py-4 rounded-lg font-semibold">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span data-en="Call to Reserve" data-ru="Позвонить для брони" data-az="Rezervasiya üçün zəng edin">Call to Reserve</span>
+                    </button>
+                </div>
+                
+                <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-300">
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-golden mr-2"></i>
+                        <span>Landau 14, Baku, Azerbaijan</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-clock text-golden mr-2"></i>
+                        <span data-en="Daily 12:00 - 01:00" data-ru="Ежедневно 12:00 - 01:00" data-az="Gündəlik 12:00 - 01:00">Daily 12:00 - 01:00</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-golden mr-2"></i>
+                        <span>+994 50 997 06 06</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Cards Section -->
+        <section class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="text-center p-8">
+                        <div class="w-20 h-20 mx-auto mb-6 bg-golden rounded-full flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt text-dark-bg text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-golden mb-4">
+                            <span data-en="Location" data-ru="Местоположение" data-az="Yer">Location</span>
+                        </h3>
+                        <p class="text-gray-300">Landau 14, Baku, Azerbaijan</p>
+                    </div>
+                    
+                    <div class="text-center p-8">
+                        <div class="w-20 h-20 mx-auto mb-6 bg-golden rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-dark-bg text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-golden mb-4">
+                            <span data-en="About Us" data-ru="О нас" data-az="Haqqımızda">About Us</span>
+                        </h3>
+                        <p class="text-gray-300">
+                            <span data-en="Daily 12:00 - 01:00" data-ru="Ежедневно 12:00 - 01:00" data-az="Gündəlik 12:00 - 01:00">Daily 12:00 - 01:00</span>
+                        </p>
+                    </div>
+                    
+                    <div class="text-center p-8">
+                        <div class="w-20 h-20 mx-auto mb-6 bg-golden rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-dark-bg text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-golden mb-4">
+                            <span data-en="Contact Us" data-ru="Контакты" data-az="Əlaqə">Contact Us</span>
+                        </h3>
+                        <p class="text-gray-300">+994 50 997 06 06</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page-section">
+        <section class="min-h-screen pt-28 pb-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="font-serif text-5xl md:text-6xl font-bold text-golden mb-8">
+                        <span data-en="About Georgian Point" data-ru="О Georgian Point" data-az="Georgian Point haqqında">About Georgian Point</span>
+                    </h1>
+                    <div class="prose prose-lg prose-invert mx-auto">
+                        <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                            <span data-en="Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality." 
+                                  data-ru="Привносим аутентичные грузинские вкусы в Баку с изысканной кухней и теплым гостеприимством." 
+                                  data-az="Sofistik yemək və isti qonaqpərvərliklə orijinal gürcü dadlarını Bakıya gətiririk.">
+                                Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality.
+                            </span>
+                        </p>
+                        
+                        <!-- Georgian countryside with traditional stone architecture and vineyards -->
+                        <div class="mb-12">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=600" 
+                                 alt="Georgian countryside with traditional architecture" 
+                                 class="rounded-xl shadow-2xl w-full h-auto">
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-12 text-left">
+                            <div>
+                                <h3 class="font-serif text-2xl text-golden mb-4">
+                                    <span data-en="Our Story" data-ru="Наша история" data-az="Bizim hekayə">Our Story</span>
+                                </h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    <span data-en="Founded with a passion for authentic Georgian cuisine, we bring the rich culinary traditions of Georgia to the vibrant city of Baku. Our chefs use traditional recipes passed down through generations." 
+                                          data-ru="Основанный с страстью к аутентичной грузинской кухне, мы привносим богатые кулинарные традиции Грузии в яркий город Баку." 
+                                          data-az="Orijinal gürcü mətbəyinə olan həvəslə yaradıldıq, Gürcüstanın zəngin kulinar ənənələrini Bakının canlı şəhərinə gətiririk.">
+                                        Founded with a passion for authentic Georgian cuisine, we bring the rich culinary traditions of Georgia to the vibrant city of Baku. Our chefs use traditional recipes passed down through generations.
+                                    </span>
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl text-golden mb-4">
+                                    <span data-en="Our Mission" data-ru="Наша миссия" data-az="Bizim missiya">Our Mission</span>
+                                </h3>
+                                <p class="text-gray-300 leading-relaxed">
+                                    <span data-en="To provide an unforgettable dining experience that captures the essence of Georgian hospitality, featuring the finest ingredients and traditional cooking methods in an elegant atmosphere." 
+                                          data-ru="Предоставить незабываемый кулинарный опыт, который передает суть грузинского гостеприимства в элегантной атмосфере." 
+                                          data-az="Gürcü qonaqpərvərliyinin mahiyyətini özündə əks etdirən unudulmaz yemək təcrübəsi təqdim etmək.">
+                                        To provide an unforgettable dining experience that captures the essence of Georgian hospitality, featuring the finest ingredients and traditional cooking methods in an elegant atmosphere.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page-section">
+        <section class="min-h-screen pt-28 pb-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h1 class="font-serif text-5xl md:text-6xl font-bold text-golden mb-6">
+                            <span data-en="Our Menu" data-ru="Наше меню" data-az="Bizim menyu">Our Menu</span>
+                        </h1>
+                        <p class="text-xl text-gray-300">
+                            <span data-en="Discover the authentic flavors of Georgia" data-ru="Откройте для себя аутентичные вкусы Грузии" data-az="Gürcüstanın orijinal dadlarını kəşf edin">Discover the authentic flavors of Georgia</span>
+                        </p>
+                    </div>
+                    
+                    <div class="grid gap-12">
+                        <!-- Appetizers -->
+                        <div class="menu-category">
+                            <h2 class="font-serif text-3xl text-golden mb-8 text-center">
+                                <span data-en="Appetizers" data-ru="Закуски" data-az="Qəlyanaltı">Appetizers</span>
+                            </h2>
+                            <div class="space-y-6">
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Khachapuri Adjaruli</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Traditional Georgian cheese-filled bread with egg and butter" 
+                                                  data-ru="Традиционный грузинский хлеб с сыром, яйцом и маслом" 
+                                                  data-az="Ənənəvi gürcü pendir dolması çörək, yumurta və kərə yağı ilə">
+                                                Traditional Georgian cheese-filled bread with egg and butter
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">18 AZN</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Pkhali Assortment</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Mixed vegetable pâtés with walnuts and Georgian spices" 
+                                                  data-ru="Ассорти овощных паштетов с орехами и грузинскими специями" 
+                                                  data-az="Qoz və gürcü ədviyyatları ilə qarışıq tərəvəz paştetləri">
+                                                Mixed vegetable pâtés with walnuts and Georgian spices
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">22 AZN</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main Courses -->
+                        <div class="menu-category">
+                            <h2 class="font-serif text-3xl text-golden mb-8 text-center">
+                                <span data-en="Main Courses" data-ru="Основные блюда" data-az="Əsas yeməklər">Main Courses</span>
+                            </h2>
+                            <div class="space-y-6">
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Khinkali (5 pieces)</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Traditional Georgian dumplings with meat and aromatic herbs" 
+                                                  data-ru="Традиционные грузинские пельмени с мясом и ароматными травами" 
+                                                  data-az="Ət və ətirli otlar ilə ənənəvi gürcü dumplinqləri">
+                                                Traditional Georgian dumplings with meat and aromatic herbs
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">25 AZN</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Chakapuli</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Tender lamb stew with cilantro, tarragon and Georgian wine" 
+                                                  data-ru="Нежное рагу из баранины с кинзой, эстрагоном и грузинским вином" 
+                                                  data-az="Keşniş, tərxun və gürcü şərabı ilə zərif quzu ragui">
+                                                Tender lamb stew with cilantro, tarragon and Georgian wine
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">35 AZN</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Shashlik Mtsvadi</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Grilled pork skewers marinated in Georgian style" 
+                                                  data-ru="Шашлык из свинины, маринованный в грузинском стиле" 
+                                                  data-az="Gürcü üslubunda marinadlanmış donuz şiş kebabu">
+                                                Grilled pork skewers marinated in Georgian style
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">32 AZN</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Beverages -->
+                        <div class="menu-category">
+                            <h2 class="font-serif text-3xl text-golden mb-8 text-center">
+                                <span data-en="Beverages" data-ru="Напитки" data-az="İçkilər">Beverages</span>
+                            </h2>
+                            <div class="space-y-6">
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Georgian Wine Selection</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Premium Georgian wines from Kakheti region" 
+                                                  data-ru="Премиальные грузинские вина из региона Кахети" 
+                                                  data-az="Kaxeti bölgəsindən premium gürcü şərabları">
+                                                Premium Georgian wines from Kakheti region
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">45-120 AZN</span>
+                                </div>
+                                
+                                <div class="flex justify-between items-start border-b border-gray-700 pb-4">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white mb-2">Borjomi</h3>
+                                        <p class="text-gray-400">
+                                            <span data-en="Natural Georgian mineral water" 
+                                                  data-ru="Натуральная грузинская минеральная вода" 
+                                                  data-az="Təbii gürcü mineral suyu">
+                                                Natural Georgian mineral water
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <span class="text-golden font-bold text-xl">8 AZN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page-section">
+        <section class="min-h-screen pt-28 pb-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h1 class="font-serif text-5xl md:text-6xl font-bold text-golden mb-6">
+                        <span data-en="Gallery" data-ru="Галерея" data-az="Qalereya">Gallery</span>
+                    </h1>
+                    <p class="text-xl text-gray-300">
+                        <span data-en="Experience the atmosphere and cuisine that awaits you" 
+                              data-ru="Почувствуйте атмосферу и кухню, которая вас ждет" 
+                              data-az="Sizi gözləyən atmosfer və mətbəxi yaşayın">
+                            Experience the atmosphere and cuisine that awaits you
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                    <!-- Traditional Georgian meal spread with multiple dishes on a wooden table -->
+                    <div class="gallery-item overflow-hidden rounded-lg">
+                        <img src="https://pixabay.com/get/g1388cc64156e389295d7e18cb3f86ba45159b4c10180450372b29bdef73ee46fa183af0386e52e8552355b970a335bd6183514046b35e7a3db9be24110f9648a_1280.jpg" 
+                             alt="Traditional Georgian feast" 
+                             class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                    
+                    <!-- Gourmet hamburger with sesame bun and fresh ingredients -->
+                    <div class="gallery-item overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400" 
+                             alt="Gourmet burger" 
+                             class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                    
+                    <!-- People toasting with wine glasses in an elegant restaurant setting -->
+                    <div class="gallery-item overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400" 
+                             alt="Wine celebration" 
+                             class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                    
+                    <!-- Modern restaurant interior with wooden tables and warm lighting -->
+                    <div class="gallery-item overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400" 
+                             alt="Restaurant interior" 
+                             class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                    
+                    <!-- Traditional paella with seafood and saffron rice -->
+                    <div class="gallery-item overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400" 
+                             alt="Seafood paella" 
+                             class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                    
+                    <!-- Chef plating an elegant dish with precise presentation -->
+                    <div class="gallery-item overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=400" 
+                             alt="Chef plating food" 
+                             class="w-full h-64 object-cover transition-transform duration-300 hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-section">
+        <section class="min-h-screen pt-28 pb-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h1 class="font-serif text-5xl md:text-6xl font-bold text-golden mb-6">
+                        <span data-en="Visit Us" data-ru="Посетите нас" data-az="Bizi ziyarət edin">Visit Us</span>
+                    </h1>
+                    <p class="text-xl text-gray-300">
+                        <span data-en="Experience authentic Georgian hospitality in the heart of Baku" 
+                              data-ru="Испытайте аутентичное грузинское гостеприимство в сердце Баку" 
+                              data-az="Bakının mərkəzində orijinal gürcü qonaqpərvərliyini yaşayın">
+                            Experience authentic Georgian hospitality in the heart of Baku
+                        </span>
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                    <!-- Contact Information -->
+                    <div class="bg-gray-800 bg-opacity-50 p-8 rounded-lg border border-golden border-opacity-20">
+                        <h2 class="font-serif text-3xl text-golden mb-8">
+                            <span data-en="Contact Information" data-ru="Контактная информация" data-az="Əlaqə məlumatları">Contact Information</span>
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-golden rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-dark-bg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold mb-1">
+                                        <span data-en="Address" data-ru="Адрес" data-az="Ünvan">Address</span>
+                                    </h3>
+                                    <p class="text-gray-300">Landau 14, Baku, Azerbaijan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-golden rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-dark-bg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold mb-1">
+                                        <span data-en="Phone" data-ru="Телефон" data-az="Telefon">Phone</span>
+                                    </h3>
+                                    <p class="text-gray-300">+994 50 997 06 06</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-golden rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-dark-bg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold mb-1">
+                                        <span data-en="Hours" data-ru="Часы работы" data-az="İş vaxtı">Hours</span>
+                                    </h3>
+                                    <p class="text-gray-300">
+                                        <span data-en="Daily: 12:00 - 01:00" data-ru="Ежедневно: 12:00 - 01:00" data-az="Gündəlik: 12:00 - 01:00">Daily: 12:00 - 01:00</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-golden rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-utensils text-dark-bg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold mb-1">
+                                        <span data-en="Cuisine" data-ru="Кухня" data-az="Mətbəx">Cuisine</span>
+                                    </h3>
+                                    <p class="text-gray-300">
+                                        <span data-en="Authentic Georgian Cuisine" data-ru="Аутентичная грузинская кухня" data-az="Orijinal gürcü mətbəxi">Authentic Georgian Cuisine</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="makeReservation()" class="btn-primary w-full mt-8 py-4 rounded-lg font-semibold text-white">
+                            <i class="fas fa-phone mr-2"></i>
+                            <span data-en="Call for Quick Reservation" data-ru="Позвонить для быстрой брони" data-az="Tez rezervasiya üçün zəng edin">Call for Quick Reservation</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Location Card -->
+                    <div class="bg-gray-800 bg-opacity-50 p-8 rounded-lg border border-golden border-opacity-20">
+                        <h2 class="font-serif text-3xl text-golden mb-8">
+                            <span data-en="Location" data-ru="Местоположение" data-az="Yer">Location</span>
+                        </h2>
+                        
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-golden rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-map-marker-alt text-dark-bg text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl text-white font-semibold mb-2">
+                                <span data-en="Find Us in Baku" data-ru="Найдите нас в Баку" data-az="Bizi Bakıda tapın">Find Us in Baku</span>
+                            </h3>
+                            <p class="text-gray-300 mb-4">Landau 14, Baku, Azerbaijan</p>
+                            <p class="text-gray-400 text-sm">
+                                <span data-en="In the heart of Baku, easily accessible by public transport" 
+                                      data-ru="В центре Баку, легко добраться на общественном транспорте" 
+                                      data-az="Bakının mərkəzində, ictimai nəqliyyatla asanlıqla çatmaq olar">
+                                    In the heart of Baku, easily accessible by public transport
+                                </span>
+                            </p>
+                            
+                            <div class="mt-8 p-6 bg-gray-700 bg-opacity-50 rounded-lg">
+                                <h4 class="text-golden font-semibold mb-3">
+                                    <span data-en="Getting Here" data-ru="Как добраться" data-az="Buraya necə çatmaq">Getting Here</span>
+                                </h4>
+                                <p class="text-gray-300 text-sm">
+                                    <span data-en="Located in central Baku with easy metro access. Parking available nearby." 
+                                          data-ru="Расположен в центре Баку с легким доступом к метро. Парковка рядом." 
+                                          data-az="Merkəzi Bakıda yerləşir, metro ilə asanlıqla çatmaq olar. Yaxınlıqda parkinq var.">
+                                        Located in central Baku with easy metro access. Parking available nearby.
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-golden-dark to-golden py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Brand -->
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <i class="fas fa-utensils text-dark-bg text-2xl mr-3"></i>
+                        <h3 class="font-serif text-2xl font-bold text-dark-bg">Georgian Point</h3>
+                    </div>
+                    <p class="text-dark-bg opacity-80 mb-4">
+                        <span data-en="Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality." 
+                              data-ru="Привносим аутентичные грузинские вкусы в Баку с изысканной кухней и теплым гостеприимством." 
+                              data-az="Bakıya sofistik yemək və isti qonaqpərvərliklə orijinal gürcü dadlarını gətiririk.">
+                            Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality.
+                        </span>
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-dark-bg hover:opacity-70 transition-opacity">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-dark-bg hover:opacity-70 transition-opacity">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-dark-bg hover:opacity-70 transition-opacity">
+                            <i class="fab fa-tripadvisor text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center">
+                    <h4 class="font-serif text-xl font-bold text-dark-bg mb-4">
+                        <span data-en="Quick Links" data-ru="Быстрые ссылки" data-az="Sürətli bağlantılar">Quick Links</span>
+                    </h4>
+                    <ul class="space-y-2 text-dark-bg opacity-80">
+                        <li><a href="#" onclick="showPage('menu')" class="hover:opacity-70 transition-opacity">
+                            <span data-en="Menu" data-ru="Меню" data-az="Menyu">Menu</span>
+                        </a></li>
+                        <li><a href="#" onclick="showPage('gallery')" class="hover:opacity-70 transition-opacity">
+                            <span data-en="Gallery" data-ru="Галерея" data-az="Qalereya">Gallery</span>
+                        </a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="hover:opacity-70 transition-opacity">
+                            <span data-en="Contact Us" data-ru="Контакты" data-az="Əlaqə">Contact Us</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Hours & Location -->
+                <div class="text-center md:text-right">
+                    <h4 class="font-serif text-xl font-bold text-dark-bg mb-4">
+                        <span data-en="Hours & Location" data-ru="Время и место" data-az="Vaxt və yer">Hours & Location</span>
+                    </h4>
+                    <div class="text-dark-bg opacity-80 space-y-2">
+                        <p>Landau 14, Baku, Azerbaijan</p>
+                        <p>
+                            <span data-en="Daily 12:00 - 01:00" data-ru="Ежедневно 12:00 - 01:00" data-az="Gündəlik 12:00 - 01:00">Daily 12:00 - 01:00</span>
+                        </p>
+                        <p>+994 50 997 06 06</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-bg border-opacity-30 mt-8 pt-8 text-center">
+                <p class="text-dark-bg opacity-70">
+                    <span data-en="© 2024 Georgian Point. All rights reserved." 
+                          data-ru="© 2024 Georgian Point. Все права защищены." 
+                          data-az="© 2024 Georgian Point. Bütün hüquqlar qorunur.">
+                        © 2024 Georgian Point. All rights reserved.
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Translations object
+        const translations = {
+            en: {
+                "Home": "Home",
+                "About Us": "About Us",
+                "Menu": "Menu",
+                "Gallery": "Gallery",
+                "Contact Us": "Contact Us",
+                "Authentic Georgian Cuisine in the Heart of Baku": "Authentic Georgian Cuisine in the Heart of Baku",
+                "Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining": "Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining",
+                "Explore Our Menu": "Explore Our Menu",
+                "Call to Reserve": "Call to Reserve",
+                "Daily 12:00 - 01:00": "Daily 12:00 - 01:00",
+                "Location": "Location",
+                "About Us": "About Us",
+                "Contact Us": "Contact Us"
+            },
+            ru: {
+                "Home": "Главная",
+                "About Us": "О нас",
+                "Menu": "Меню",
+                "Gallery": "Галерея", 
+                "Contact Us": "Контакты",
+                "Authentic Georgian Cuisine in the Heart of Baku": "Аутентичная грузинская кухня в сердце Баку",
+                "Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining": "Испытайте богатые вкусы и теплое гостеприимство Грузии в нашем изысканном ресторане с приглушенным освещением",
+                "Explore Our Menu": "Изучить меню",
+                "Call to Reserve": "Позвонить для брони",
+                "Daily 12:00 - 01:00": "Ежедневно 12:00 - 01:00",
+                "Location": "Местоположение",
+                "About Us": "О нас",
+                "Contact Us": "Контакты"
+            },
+            az: {
+                "Home": "Ana Səhifə",
+                "About Us": "Haqqımızda",
+                "Menu": "Menyu",
+                "Gallery": "Qalereya",
+                "Contact Us": "Əlaqə",
+                "Authentic Georgian Cuisine in the Heart of Baku": "Bakının mərkəzində orijinal gürcü mətbəxi",
+                "Experience the rich flavors and warm hospitality of Georgia in our sophisticated, dimly-lit restaurant featuring velvet textures and elevated dining": "Təkmil restoranımızda Gürcüstanın zəngin dadlarını və isti qonaqpərvərliyini yaşayın",
+                "Explore Our Menu": "Menyumuzu araşdırın",
+                "Call to Reserve": "Rezervasiya üçün zəng edin",
+                "Daily 12:00 - 01:00": "Gündəlik 12:00 - 01:00",
+                "Location": "Yer",
+                "About Us": "Haqqımızda",
+                "Contact Us": "Əlaqə"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            const mobileMenu = document.querySelector('.mobile-menu');
+            if (mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+            }
+        }
+
+        // Language Switching
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            
+            // Update language button states
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('language-active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('language-active');
+                }
+            });
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-en]').forEach(element => {
+                const key = element.getAttribute(`data-${lang}`);
+                if (key) {
+                    element.textContent = key;
+                }
+            });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Make Reservation Function
+        function makeReservation() {
+            // TODO: Implement reservation system or redirect to booking platform
+            window.open('tel:+994509970606', '_self');
+        }
+
+        // Initialize page
+        (function() {
+            // Set initial language
+            changeLanguage('en');
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const mobileMenu = document.querySelector('.mobile-menu');
+                const menuButton = document.querySelector('[onclick="toggleMobileMenu()"]');
+                
+                if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
