@@ -185,6 +185,8 @@ export const translations = {
     // Gallery Page
     galleryTitle: "Gallery",
     gallerySubtitle: "Experience the atmosphere and cuisine that awaits you",
+    videoSection: "Restaurant Video",
+    photoGallery: "Photo Gallery",
     
     // Contact Page
     visitUs: "Visit Us",
@@ -394,6 +396,8 @@ export const translations = {
     // Gallery Page
     galleryTitle: "Галерея",
     gallerySubtitle: "Почувствуйте атмосферу и кухню, которая вас ждет",
+    videoSection: "Видео о ресторане",
+    photoGallery: "Фотогалерея",
     
     // Contact Page
     visitUs: "Посетите нас",
@@ -603,6 +607,8 @@ export const translations = {
     // Gallery Page
     galleryTitle: "Qalereya",
     gallerySubtitle: "Sizi gözləyən atmosfer və mətbəxi yaşayın",
+    videoSection: "Restoran Videosu",
+    photoGallery: "Foto Qalereya",
     
     // Contact Page
     visitUs: "Bizi ziyarət edin",
