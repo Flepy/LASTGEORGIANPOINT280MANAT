@@ -9,164 +9,268 @@ interface MenuItem {
 export default function Menu() {
   const { t } = useTranslation();
 
-  const salads: MenuItem[] = [
-    { nameKey: "caesar_chicken", price: "13 ₼" },
-    { nameKey: "caesar_seafood", price: "15 ₼" },
-    { nameKey: "georgian_salad", price: "8 ₼" },
-    { nameKey: "rukolla_salad", price: "7 ₼" },
-    { nameKey: "pumpkin_salad", price: "6 ₼" },
-    { nameKey: "spinach_salad", price: "10 ₼" },
-    { nameKey: "chicken_salad", price: "10 ₼" },
-    { nameKey: "shepherd_salad", price: "6 ₼" }
-  ];
-
-  const soups: MenuItem[] = [
-    { nameKey: "kharcho_soup", price: "8 ₼" },
-    { nameKey: "chikhirtma", price: "8 ₼" },
-    { nameKey: "borsh", price: "7 ₼" }
-  ];
-
+  // Cold Appetizers - Soyuq Başlanğıclar
   const coldAppetizers: MenuItem[] = [
-    { nameKey: "pkhali_assorted_2", price: "8 ₼", portions: "2 чел." },
-    { nameKey: "pkhali_assorted_4", price: "16 ₼", portions: "4 чел." },
-    { nameKey: "cheese_assorted_2", price: "10 ₼", portions: "2 чел." },
-    { nameKey: "cheese_assorted_4", price: "20 ₼", portions: "4 чел." },
-    { nameKey: "baje", price: "9 ₼" },
-    { nameKey: "french_fries", price: "5 ₼" },
-    { nameKey: "chicken_nuggets", price: "10 ₼" },
-    { nameKey: "chvishtari_cucumber", price: "7 ₼" },
-    { nameKey: "mchadi_cheese", price: "8 ₼" }
+    { nameKey: "eggplant_roll", price: "9₼" },
+    { nameKey: "homemade_cabbage_pickles", price: "5₼" },
+    { nameKey: "gouda_cheese", price: "8₼" },
+    { nameKey: "sliced_sulguni", price: "7₼" },
+    { nameKey: "imeruli_cheese", price: "5₼" },
+    { nameKey: "nadugi_roll", price: "10₼" },
+    { nameKey: "cheese_assorted", price: "17₼" },
+    { nameKey: "pkhali_assorted", price: "15₼" },
+    { nameKey: "satsivi_chicken", price: "10₼" },
+    { nameKey: "sulguni_cheese", price: "8₼" },
+    { nameKey: "vegetable_basket", price: "9₼" },
+    { nameKey: "pickles_assorted", price: "8₼" },
+    { nameKey: "olives_assorted", price: "6₼" },
+    { nameKey: "crispy_eggplant", price: "10₼" }
   ];
 
-  const khinkali: MenuItem[] = [
-    { nameKey: "kalakuri_khinkali_5", price: "10 ₼", portions: "5 шт." },
-    { nameKey: "kalakuri_khinkali_10", price: "20 ₼", portions: "10 шт." },
-    { nameKey: "fried_khinkali", price: "13 ₼", portions: "5 шт." }
+  // Salads - Salatlar
+  const salads: MenuItem[] = [
+    { nameKey: "cherry_tomato_walnut_salad", price: "10₼" },
+    { nameKey: "avocado_shrimp_salad", price: "16₼" },
+    { nameKey: "shepherd_salad", price: "6₼" },
+    { nameKey: "shepherd_salad_cheese", price: "8₼" },
+    { nameKey: "georgian_salad", price: "9₼" },
+    { nameKey: "bean_salad_meat", price: "14₼" },
+    { nameKey: "bean_salad", price: "12₼" },
+    { nameKey: "grill_salad_banquet", price: "8₼" },
+    { nameKey: "caesar_shrimp", price: "18₼" },
+    { nameKey: "caesar_chicken", price: "14₼" },
+    { nameKey: "citrus_salad", price: "17₼" },
+    { nameKey: "sulguni_salad", price: "9₼" },
+    { nameKey: "tbilisi_salad", price: "16₼" },
+    { nameKey: "chicken_salad", price: "10₼" }
   ];
 
-  const coldDishes: MenuItem[] = [
-    { nameKey: "ajapsandali_2", price: "9 ₼", portions: "2 чел." },
-    { nameKey: "ajapsandali_4", price: "18 ₼", portions: "4 чел." },
-    { nameKey: "lobya_2", price: "9 ₼", portions: "2 чел." },
-    { nameKey: "lobya_4", price: "18 ₼", portions: "4 чел." },
-    { nameKey: "satsivi", price: "10 ₼" },
-    { nameKey: "kuchmachi", price: "13 ₼" },
-    { nameKey: "nadugi", price: "10 ₼" },
-    { nameKey: "gebjaliya", price: "10 ₼" }
+  // Soups - Şorbalar
+  const soups: MenuItem[] = [
+    { nameKey: "borsh_meat", price: "10₼" },
+    { nameKey: "borsh_meat_half", price: "5₼" },
+    { nameKey: "chikhirtma_chicken_half", price: "5₼" },
+    { nameKey: "chikhirtma_chicken", price: "8₼" },
+    { nameKey: "dushbere_soup", price: "7₼" },
+    { nameKey: "lentil_soup", price: "5₼" },
+    { nameKey: "chicken_soup", price: "6₼" },
+    { nameKey: "kharcho_meat_half", price: "5₼" },
+    { nameKey: "kharcho_meat", price: "9₼" }
   ];
 
-  const breadProducts: MenuItem[] = [
-    { nameKey: "imeretian_khachapuri", price: "10 ₼" },
-    { nameKey: "adjarian_khachapuri", price: "15 ₼" },
-    { nameKey: "adjarian_khachapuri_titanic", price: "30 ₼" },
-    { nameKey: "lobiani", price: "10 ₼" }
+  // Hot Appetizers - İsti Başlanğıclar
+  const hotAppetizers: MenuItem[] = [
+    { nameKey: "mushroom_sulguni", price: "9₼" },
+    { nameKey: "shrimp_breaded", price: "16₼" },
+    { nameKey: "mchadi_cheese", price: "9₼" },
+    { nameKey: "fried_string_cheese", price: "8₼" },
+    { nameKey: "fried_sulguni", price: "10₼" },
+    { nameKey: "string_cheese", price: "7₼" },
+    { nameKey: "chicken_nuggets", price: "12₼" }
   ];
 
-  const hotDishes: MenuItem[] = [
-    { nameKey: "shkmeruli", price: "18 ₼" },
-    { nameKey: "chicken_blackberry_sauce", price: "20 ₼" },
-    { nameKey: "lule_kebab", price: "12 ₼" },
-    { nameKey: "beef_basturma", price: "18 ₼" },
-    { nameKey: "salmon_steak", price: "27 ₼" },
-    { nameKey: "lamb_ribs", price: "16 ₼" },
-    { nameKey: "tashmijabi", price: "10 ₼" },
-    { nameKey: "beef_ribs_gavali", price: "18 ₼" },
-    { nameKey: "seabass_grilled", price: "25 ₼" },
-    { nameKey: "grape_dolma", price: "15 ₼" },
-    { nameKey: "beef_fajitas", price: "13 ₼" },
-    { nameKey: "chicken_fajitas", price: "10 ₼" },
-    { nameKey: "spaghetti_bolognese", price: "12 ₼" },
-    { nameKey: "fettuccino_alfredo", price: "10 ₼" },
-    { nameKey: "bucatini_bacon", price: "10 ₼" },
-    { nameKey: "gnocchi", price: "6 ₼" },
-    { nameKey: "artichoke_cauliflower", price: "10 ₼" },
-    { nameKey: "ojakhuri", price: "12 ₼" },
-    { nameKey: "eggplant_oyster_sauce", price: "8 ₼" },
-    { nameKey: "kharcho_megrelian", price: "16 ₼" }
+  // Main Dishes - Əsas Yeməklər
+  const mainDishes: MenuItem[] = [
+    { nameKey: "abkhazura", price: "15₼" },
+    { nameKey: "arabuli_meat", price: "20₼" },
+    { nameKey: "beef_cherry_walnut_sauce", price: "21₼" },
+    { nameKey: "beef_pomegranate_stew", price: "22₼" },
+    { nameKey: "chashushili_meat", price: "12₼" },
+    { nameKey: "chahokhbili_chicken", price: "10₼" },
+    { nameKey: "homemade_stew", price: "13₼" },
+    { nameKey: "fajitas_beef", price: "18₼" },
+    { nameKey: "fajitas_chicken", price: "15₼" },
+    { nameKey: "kefir_liver", price: "20₼" },
+    { nameKey: "village_seabass_lemon", price: "20₼" },
+    { nameKey: "kupati_meat", price: "14₼" },
+    { nameKey: "beans_clay_pot", price: "14₼" },
+    { nameKey: "madam_bovary", price: "15₼" },
+    { nameKey: "mepuri_meat", price: "20₼" },
+    { nameKey: "ojakhuri", price: "13₼" },
+    { nameKey: "salmon_lemon_sauce", price: "26₼" },
+    { nameKey: "lamb_ribs_puree", price: "20₼" },
+    { nameKey: "lamb_stew", price: "16₼" },
+    { nameKey: "juicy_chicken", price: "12₼" },
+    { nameKey: "shkmeruli_beef", price: "30₼" },
+    { nameKey: "shkmeruli_chicken", price: "18₼" },
+    { nameKey: "tabaka", price: "20₼" },
+    { nameKey: "tavaduri_meat", price: "18₼" },
+    { nameKey: "chicken_schnitzel", price: "14₼" },
+    { nameKey: "grape_dolma", price: "12₼" },
+    { nameKey: "egg_tomato", price: "6₼" }
   ];
 
-  const desserts: MenuItem[] = [
-    { nameKey: "cheesecake_matcha", price: "8 ₼" },
-    { nameKey: "lemon_posset", price: "8 ₼" },
-    { nameKey: "desert_point_pumpkin", price: "15 ₼" },
-    { nameKey: "creme_brulee", price: "12 ₼" },
-    { nameKey: "gallet", price: "9 ₼" },
-    { nameKey: "fruit_assorted_2", price: "15 ₼", portions: "2 чел." },
-    { nameKey: "fruit_assorted_4", price: "25 ₼", portions: "4 чел." },
-    { nameKey: "fruit_salad", price: "6 ₼" }
-  ];
-
+  // Sauces - Souslar
   const sauces: MenuItem[] = [
-    { nameKey: "tkemali_red_green", price: "2 ₼" },
-    { nameKey: "georgian_sauce", price: "2 ₼" },
-    { nameKey: "mustard_sauce", price: "3 ₼" },
-    { nameKey: "mexican_sauce", price: "2 ₼" },
-    { nameKey: "sweet_sauce", price: "2 ₼" },
-    { nameKey: "ketchup", price: "1 ₼" },
-    { nameKey: "mayonnaise", price: "1 ₼" },
-    { nameKey: "green_adjika", price: "3 ₼" },
-    { nameKey: "red_adjika", price: "3 ₼" }
+    { nameKey: "dijon_mustard", price: "2₼" },
+    { nameKey: "georgian_sauce", price: "2₼" },
+    { nameKey: "ketchup", price: "2₼" },
+    { nameKey: "mayonnaise", price: "2₼" },
+    { nameKey: "pomegranate_wine", price: "2₼" },
+    { nameKey: "sour_cream", price: "2₼" },
+    { nameKey: "caesar_sauce", price: "2₼" },
+    { nameKey: "sweet_chili", price: "2₼" },
+    { nameKey: "tkemali_red", price: "2₼" },
+    { nameKey: "tkemali_green", price: "2₼" },
+    { nameKey: "adjika", price: "2₼" }
   ];
 
-  const freshJuices: MenuItem[] = [
-    { nameKey: "orange_juice", price: "8 ₼" },
-    { nameKey: "apple_juice", price: "7 ₼" },
-    { nameKey: "grapefruit_juice", price: "9 ₼" },
-    { nameKey: "pineapple_juice", price: "10 ₼" }
+  // Pasta Dishes - Xəmir Xörəkləri
+  const pastaDishes: MenuItem[] = [
+    { nameKey: "khinkali_boiled_10", price: "20₼", portions: "10 əd" },
+    { nameKey: "khinkali_boiled_5", price: "10₼", portions: "5 əd" },
+    { nameKey: "khinkali_fried_10", price: "26₼", portions: "10 əd" },
+    { nameKey: "khinkali_fried_5", price: "13₼", portions: "5 əd" },
+    { nameKey: "adjarian_khachapuri", price: "15₼" },
+    { nameKey: "gvizeli_khachapuri", price: "17₼" },
+    { nameKey: "imeretian_khachapuri", price: "12₼" },
+    { nameKey: "kubdari_svanetian", price: "22₼" },
+    { nameKey: "lazuri_khachapuri", price: "20₼" },
+    { nameKey: "lobiani_khachapuri", price: "12₼" },
+    { nameKey: "megreli_khachapuri", price: "15₼" },
+    { nameKey: "cheese_bread_khachapuri", price: "15₼" }
   ];
 
-  const lemonades: MenuItem[] = [
-    { nameKey: "grape_lemonade", price: "5 ₼" },
-    { nameKey: "duchess_lemonade", price: "5 ₼" },
-    { nameKey: "tarkhun_lemonade", price: "5 ₼" }
+  // Kebabs - Kabablar
+  const kebabs: MenuItem[] = [
+    { nameKey: "liver_tail_roll", price: "10₼" },
+    { nameKey: "beef_basturma", price: "14₼" },
+    { nameKey: "gpoint_kebab", price: "15₼" },
+    { nameKey: "georgian_lule_kebab", price: "13₼" },
+    { nameKey: "potato_lule_kebab", price: "5₼" },
+    { nameKey: "village_seabass_tarragon_grill", price: "20₼" },
+    { nameKey: "grilled_potato_kebab", price: "5₼" },
+    { nameKey: "lamb_entrecote_ribs", price: "16₼" },
+    { nameKey: "lamb_entrecote_apple", price: "13₼" },
+    { nameKey: "lamb_offal", price: "8₼" },
+    { nameKey: "lamb_lule_kebab", price: "11₼" },
+    { nameKey: "lamb_tikka_kebab", price: "12₼" },
+    { nameKey: "semichka_kebab", price: "9₼" },
+    { nameKey: "vegetable_kebab", price: "3₼" },
+    { nameKey: "chicken_kebab", price: "8₼" }
   ];
 
-  const naturalJuices: MenuItem[] = [
-    { nameKey: "apple_juice", price: "9 ₼" },
-    { nameKey: "mixed_juice", price: "9 ₼" },
-    { nameKey: "orange_juice", price: "9 ₼" },
-    { nameKey: "peach_juice", price: "9 ₼" },
-    { nameKey: "mors_juice", price: "9 ₼" },
-    { nameKey: "cherry_juice", price: "9 ₼" },
-    { nameKey: "tomato_juice", price: "9 ₼" },
-    { nameKey: "pineapple_juice", price: "9 ₼" }
+  // Pan Dishes - Sac Üstü Yeməkləri
+  const panDishes: MenuItem[] = [
+    { nameKey: "pan_beef", price: "55₼" },
+    { nameKey: "pan_lamb", price: "45₼" },
+    { nameKey: "pan_chicken", price: "40₼" }
   ];
 
-  const homemadeLemonade: MenuItem[] = [
-    { nameKey: "watermelon_lemonade", price: "8 ₼" },
-    { nameKey: "bubblegum_lemonade", price: "8 ₼" },
-    { nameKey: "basil_lemonade", price: "8 ₼" },
-    { nameKey: "apple_kiwi_lemonade", price: "8 ₼" },
-    { nameKey: "passion_fruit_lemonade", price: "8 ₼" }
+  // Side Dishes - Qarnirlər
+  const sideDishes: MenuItem[] = [
+    { nameKey: "rice", price: "4₼" },
+    { nameKey: "village_potato", price: "4₼" },
+    { nameKey: "homemade_potato", price: "4₼" },
+    { nameKey: "mixed_vegetables", price: "4₼" },
+    { nameKey: "french_fries", price: "4₼" }
   ];
 
-  const compote: MenuItem[] = [
-    { nameKey: "cherry_compote", price: "6 ₼" },
-    { nameKey: "feijoa_compote", price: "6 ₼" },
-    { nameKey: "quince_compote", price: "6 ₼" }
+  // Desserts - Şirniyyatlar
+  const desserts: MenuItem[] = [
+    { nameKey: "white_cherry_jam", price: "7₼" },
+    { nameKey: "ice_cream_assorted", price: "6₼" },
+    { nameKey: "strawberry_ice_cream", price: "6₼" },
+    { nameKey: "strawberry_jam", price: "7₼" },
+    { nameKey: "fruit_assorted", price: "20₼" },
+    { nameKey: "churchkhela", price: "10₼" },
+    { nameKey: "walnuts", price: "5₼" },
+    { nameKey: "fried_ice_cream", price: "8₼" },
+    { nameKey: "chocolate_ice_cream", price: "6₼" },
+    { nameKey: "vanilla_ice_cream", price: "6₼" },
+    { nameKey: "cherry_jam", price: "7₼" },
+    { nameKey: "nuts", price: "5₼" }
   ];
 
+  // Hot Drinks - İsti İçkilər
   const hotDrinks: MenuItem[] = [
-    { nameKey: "black_tea", price: "10 ₼" },
-    { nameKey: "tea_cup", price: "3 ₼" },
-    { nameKey: "single_espresso", price: "3 ₼" },
-    { nameKey: "double_espresso", price: "4 ₼" },
-    { nameKey: "americano", price: "5 ₼" },
-    { nameKey: "cappuccino", price: "6 ₼" },
-    { nameKey: "latte", price: "6 ₼" },
-    { nameKey: "irish_coffee", price: "13 ₼" },
-    { nameKey: "irish_lady", price: "13 ₼" }
+    { nameKey: "americano", price: "5₼" },
+    { nameKey: "black_tea", price: "10₼" },
+    { nameKey: "cappuccino", price: "7₼" },
+    { nameKey: "tea_cup", price: "2₼" },
+    { nameKey: "coffee_mocha", price: "6₼" },
+    { nameKey: "double_espresso", price: "5₼" },
+    { nameKey: "latte", price: "6₼" },
+    { nameKey: "raff_coffee", price: "7₼" },
+    { nameKey: "single_espresso", price: "4₼" }
   ];
 
+  // Cold Drinks - Sərinləşdirici İçkilər
   const coldDrinks: MenuItem[] = [
-    { nameKey: "cola", price: "3 ₼" },
-    { nameKey: "sprite", price: "3 ₼" },
-    { nameKey: "fanta", price: "3 ₼" },
-    { nameKey: "fuse_tea", price: "3 ₼" },
-    { nameKey: "sarikiz", price: "4 ₼" },
-    { nameKey: "tonic", price: "4 ₼" },
-    { nameKey: "sirab_small", price: "3 ₼" },
-    { nameKey: "sirab_large", price: "6 ₼" }
+    { nameKey: "borjomi_half", price: "5₼" },
+    { nameKey: "cola_classic", price: "5₼" },
+    { nameKey: "cola_zero", price: "5₼" },
+    { nameKey: "fanta", price: "5₼" },
+    { nameKey: "fuse_tea", price: "4₼" },
+    { nameKey: "hot_water", price: "5₼" },
+    { nameKey: "natakhtari_duchess", price: "5₼" },
+    { nameKey: "natakhtari_tarragon", price: "5₼" },
+    { nameKey: "natakhtari_grape", price: "5₼" },
+    { nameKey: "gazli_kobi", price: "5₼" },
+    { nameKey: "qazsiz_sno", price: "5₼" },
+    { nameKey: "redbull", price: "9₼" },
+    { nameKey: "sairme_gazli", price: "5₼" },
+    { nameKey: "sairme_qazsiz", price: "5₼" },
+    { nameKey: "shalgam", price: "4₼" },
+    { nameKey: "sarikiz", price: "4₼" },
+    { nameKey: "sirab_gazli_small", price: "4₼" },
+    { nameKey: "sirab_gazli_large", price: "6₼" },
+    { nameKey: "sirab_qazsiz_small", price: "4₼" },
+    { nameKey: "sirab_qazsiz_large", price: "6₼" },
+    { nameKey: "sprite", price: "5₼" },
+    { nameKey: "tonic_schweppes", price: "4₼" }
+  ];
+
+  // Natural Juices - Təbii Şirələr
+  const naturalJuices: MenuItem[] = [
+    { nameKey: "cherry_compote", price: "6₼" },
+    { nameKey: "feijoa_compote", price: "6₼" },
+    { nameKey: "quince_compote", price: "6₼" },
+    { nameKey: "grape_compote", price: "6₼" },
+    { nameKey: "cherry_glass", price: "3₼" },
+    { nameKey: "cherry_natural_1l", price: "8₼" },
+    { nameKey: "apple_glass", price: "3₼" },
+    { nameKey: "apple_natural_1l", price: "8₼" },
+    { nameKey: "pineapple_glass", price: "3₼" },
+    { nameKey: "pineapple_natural_1l", price: "8₼" },
+    { nameKey: "multivitamin_glass", price: "3₼" },
+    { nameKey: "multivitamin_natural_1l", price: "8₼" },
+    { nameKey: "tomato_glass", price: "3₼" },
+    { nameKey: "tomato_natural_1l", price: "8₼" },
+    { nameKey: "orange_glass", price: "3₼" },
+    { nameKey: "orange_natural_1l", price: "8₼" },
+    { nameKey: "peach_glass", price: "3₼" },
+    { nameKey: "peach_natural_1l", price: "8₼" }
+  ];
+
+  // Fresh Juices - Fresh Şirələr
+  const freshJuices: MenuItem[] = [
+    { nameKey: "apple_fresh", price: "8₼" },
+    { nameKey: "pineapple_fresh", price: "12₼" },
+    { nameKey: "grapefruit_fresh", price: "10₼" },
+    { nameKey: "pomegranate_fresh", price: "10₼" },
+    { nameKey: "orange_fresh", price: "9₼" }
+  ];
+
+  // Lemonades - Limonadlar
+  const lemonades: MenuItem[] = [
+    { nameKey: "apple_kiwi_lemonade_1l", price: "15.5₼" },
+    { nameKey: "apple_kiwi_lemonade_glass", price: "5₼" },
+    { nameKey: "basil_lemonade_1l", price: "15.5₼" },
+    { nameKey: "basil_lemonade_glass", price: "5₼" },
+    { nameKey: "bubble_gum_lemonade_1l", price: "15.5₼" },
+    { nameKey: "bubble_gum_lemonade_glass", price: "5₼" },
+    { nameKey: "passion_fruit_lemonade_1l", price: "15.5₼" },
+    { nameKey: "passion_fruit_lemonade_glass", price: "5₼" }
+  ];
+
+  // Non-Alcoholic Cocktails - Alkoqolsuz Kokteyllər
+  const nonAlcoholicCocktails: MenuItem[] = [
+    { nameKey: "berry_mix", price: "10₼" },
+    { nameKey: "exotic_passion", price: "9₼" },
+    { nameKey: "mojito_energy_non_alcohol", price: "12₼" },
+    { nameKey: "mojito_non_alcohol", price: "8₼" },
+    { nameKey: "pina_colada_non_alcohol", price: "9₼" }
   ];
 
   const MenuCategory = ({ title, items, testId }: { title: string; items: MenuItem[]; testId: string }) => (
@@ -213,6 +317,11 @@ export default function Menu() {
             <div className="grid gap-12 md:grid-cols-2">
               <div className="space-y-12">
                 <MenuCategory 
+                  title={t('coldAppetizers')} 
+                  items={coldAppetizers} 
+                  testId="cold-appetizers-section"
+                />
+                <MenuCategory 
                   title={t('salads')} 
                   items={salads} 
                   testId="salads-section"
@@ -223,47 +332,67 @@ export default function Menu() {
                   testId="soups-section"
                 />
                 <MenuCategory 
-                  title={t('coldAppetizers')} 
-                  items={coldAppetizers} 
-                  testId="cold-appetizers-section"
+                  title={t('hotAppetizers')} 
+                  items={hotAppetizers} 
+                  testId="hot-appetizers-section"
                 />
                 <MenuCategory 
-                  title={t('khinkali')} 
-                  items={khinkali} 
-                  testId="khinkali-section"
-                />
-                <MenuCategory 
-                  title={t('coldDishes')} 
-                  items={coldDishes} 
-                  testId="cold-dishes-section"
-                />
-                <MenuCategory 
-                  title={t('breadProducts')} 
-                  items={breadProducts} 
-                  testId="bread-products-section"
-                />
-                <MenuCategory 
-                  title={t('desserts')} 
-                  items={desserts} 
-                  testId="desserts-section"
+                  title={t('mainDishes')} 
+                  items={mainDishes} 
+                  testId="main-dishes-section"
                 />
                 <MenuCategory 
                   title={t('sauces')} 
                   items={sauces} 
                   testId="sauces-section"
                 />
+                <MenuCategory 
+                  title={t('pastaDishes')} 
+                  items={pastaDishes} 
+                  testId="pasta-dishes-section"
+                />
               </div>
               
               <div className="space-y-12">
                 <MenuCategory 
-                  title={t('hotDishes')} 
-                  items={hotDishes} 
-                  testId="hot-dishes-section"
+                  title={t('kebabs')} 
+                  items={kebabs} 
+                  testId="kebabs-section"
+                />
+                <MenuCategory 
+                  title={t('panDishes')} 
+                  items={panDishes} 
+                  testId="pan-dishes-section"
+                />
+                <MenuCategory 
+                  title={t('sideDishes')} 
+                  items={sideDishes} 
+                  testId="side-dishes-section"
+                />
+                <MenuCategory 
+                  title={t('desserts')} 
+                  items={desserts} 
+                  testId="desserts-section"
                 />
                 
                 <div className="space-y-8">
                   <h2 className="font-serif text-4xl text-golden text-center mb-8">{t('beverages')}</h2>
                   
+                  <MenuCategory 
+                    title={t('hotDrinks')} 
+                    items={hotDrinks} 
+                    testId="hot-drinks-section"
+                  />
+                  <MenuCategory 
+                    title={t('coldDrinks')} 
+                    items={coldDrinks} 
+                    testId="cold-drinks-section"
+                  />
+                  <MenuCategory 
+                    title={t('naturalJuices')} 
+                    items={naturalJuices} 
+                    testId="natural-juices-section"
+                  />
                   <MenuCategory 
                     title={t('freshJuices')} 
                     items={freshJuices} 
@@ -275,29 +404,9 @@ export default function Menu() {
                     testId="lemonades-section"
                   />
                   <MenuCategory 
-                    title={t('naturalJuices')} 
-                    items={naturalJuices} 
-                    testId="natural-juices-section"
-                  />
-                  <MenuCategory 
-                    title={t('homemadeLemonade')} 
-                    items={homemadeLemonade} 
-                    testId="homemade-lemonade-section"
-                  />
-                  <MenuCategory 
-                    title={t('compote')} 
-                    items={compote} 
-                    testId="compote-section"
-                  />
-                  <MenuCategory 
-                    title={t('hotDrinks')} 
-                    items={hotDrinks} 
-                    testId="hot-drinks-section"
-                  />
-                  <MenuCategory 
-                    title={t('coldDrinks')} 
-                    items={coldDrinks} 
-                    testId="cold-drinks-section"
+                    title={t('nonAlcoholicCocktails')} 
+                    items={nonAlcoholicCocktails} 
+                    testId="non-alcoholic-cocktails-section"
                   />
                 </div>
               </div>

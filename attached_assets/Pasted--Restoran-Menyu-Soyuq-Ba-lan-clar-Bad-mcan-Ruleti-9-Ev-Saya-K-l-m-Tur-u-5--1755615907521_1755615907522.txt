@@ -1,0 +1,479 @@
+# Restoran Menyu
+
+---
+
+### Soyuq Başlanğıclar
+* Badımcan Ruleti - 9₼
+* Ev Sayağı Kələm Turşu - 5₼
+* Guda Pendiri - 8₼
+* Hisə Verilmiş Suluquni - 7₼
+* İmeruli Pendiri - 5₼
+* Naduqi Ruleti - 10₼
+* Pendir Assorti - 17₼
+* Pxali Assorti - 15₼
+* Saçivi Toyuq İlə - 10₼
+* Suluquni Pendiri - 8₼
+* Tərəvəz Səbəti - 9₼
+* Turşu Assorti - 8₼
+* Zeytun Assorti - 6₼
+* Xırt Xırt Badımcan - 10₼
+
+---
+
+### Salatlar
+* Albalı Pomidor Zoğal Sousda Salat - 10₼
+* Avakado İlə Krivetka Salatı - 16₼
+* Çoban Salatı - 6₼
+* Çoban Salat Pendir İlə - 8₼
+* Gürcü Salatı - 9₼
+* Lobya Salat Ət İlə - 14₼
+* Lobya Salatı - 12₼
+* Manqal Salat (Banket) - 8₼
+* Sezar Krevet İlə - 18₼
+* Sezar Toyuq İlə - 14₼
+* Sitrus Salatı - 17₼
+* Suluquni Salatı - 9₼
+* Tbilisi Salatı - 16₼
+* Toyuq Salatı - 10₼
+
+---
+
+### Şorbalar
+* Borş Ət - 10₼
+* Borş Ət 0.5 Pors - 5₼
+* Çığırtma Toyuq Filesi İlə 0.5 Pors - 5₼
+* Çığırtma Toyuq Filesi İlə Şorba - 8₼
+* Düşbərə Şorba - 7₼
+* Mərci Şorbası - 5₼
+* Toyuq Şorbası - 6₼
+* Xarço Ət 0.5 Pors - 5₼
+* Xarço Ət İlə - 9₼
+
+---
+
+### İsti Başlanğıclar
+* Göbələk Suluquni - 9₼
+* Krevetka Suxari İlə - 16₼
+* Mçadi Pendir İlə - 9₼
+* Qızardılmış Saçaq Pendir - 8₼
+* Qızardılmış Suluqini - 10₼
+* Saçaq Pendir - 7₼
+* Toyuq Nuggets - 12₼
+
+---
+
+### Əsas Yeməklər
+* Abxazura - 15₼
+* Arabuli Ət İlə - 20₼
+* Can Əti Albalı Zoğal Sousunda - 21₼
+* Can Əti Nar Qovurma - 22₼
+* Çaşuşili Ət İlə - 12₼
+* Çaxoxbili Toyuq İlə - 10₼
+* Evsayağı Tuşonka - 13₼
+* Faxitos Can Əti İlə - 18₼
+* Faxitos Toyuq İlə - 15₼
+* Kefli Beçə - 20₼
+* Kənd Çolpa Limon Sousunda - 20₼
+* Kupati Ət İlə - 14₼
+* Lobya Saxsı Qabda - 14₼
+* Madam Bovari - 15₼
+* Mepuri Ət İlə - 20₼
+* Odjaxuri - 13₼
+* Qızıl Balıq Limon Sousunda - 26₼
+* Quzu Qabırğa Şabalıd Püresi İlə - 20₼
+* Quzu Qovurma - 16₼
+* Şirəli Maça - 12₼
+* Şkmeruli Can Ətindən - 30₼
+* Şkmeruli Toyuq Ətindən - 18₼
+* Tabaka - 20₼
+* Tavaduri Ət İlə - 18₼
+* Toyuq Şnitsel - 14₼
+* Yarpaq Dolması - 12₼
+* Yumurta Pomidor - 6₼
+
+---
+
+### Souslar
+* Djon Xardal - 2₼
+* Gürcü Sousu - 2₼
+* Ketçup - 2₼
+* Mayonez - 2₼
+* Nar Şərab - 2₼
+* Qatıq - 2₼
+* Sezar Sous - 2₼
+* Sweet Chili Sous - 2₼
+* Tkemali Qırmızı - 2₼
+* Tkemali Yaşıl - 2₼
+* Xama - 2₼
+
+---
+
+### Xəmir Xörəkləri
+* Xəngəl Qaynadılmış 10 Əd - 20₼
+* Xəngəl Qaynadılmış 5 Əd - 10₼
+* Xəngəl Qızardılmış 10 Əd - 26₼
+* Xəngəl Qızardılmış 5 Əd - 13₼
+* Adjaruli Xaçapurisi - 15₼
+* Gvizeli Xaçapurisi - 17₼
+* İmeruli Xaçapurisi - 12₼
+* Kubdari - Svaneti Xaçapurisi - 22₼
+* Lazuri Xaçapurisi - 20₼
+* Lobyani Xaçapurisi - 12₼
+* Meqrel Xaçapurisi - 15₼
+* Şomulu Pendirli Xaçapuri - 15₼
+
+---
+
+### Kabablar
+* Ciyər Quyruq Rulet - 10₼
+* Dana Bastırma - 14₼
+* G.Point Kabab - 15₼
+* Gürcü Lülə Kabab - 13₼
+* Kartof Lüləsi Kabab - 5₼
+* Kənd Çolpa Tarxun Sousunda Manqalda - 20₼
+* Külləmə Kartof Kababı - 5₼
+* Quzu Antrikot Qabırğa - 16₼
+* Quzu Antrikot Yabloçko - 13₼
+* Quzu İçalat - 8₼
+* Quzu Lülə Kabab - 11₼
+* Quzu Tikə Kabab - 12₼
+* Semiçka Kabab - 9₼
+* Tərəvəz Kababı - 3₼
+* Toyuq Kabab - 8₼
+
+---
+
+### Sac Üstü Yeməkləri
+* Sac Can Əti - 55₼
+* Sac Quzu - 45₼
+* Sac Toyuq - 40₼
+
+---
+
+### Qarnirlər
+* Düyü - 4₼
+* Kartof Kənd Sayağı - 4₼
+* Ev Sayağı Kartof - 4₼
+* Tərəvəz Qarışıq - 4₼
+* Frenc Fries - 4₼
+
+---
+
+### Şirniyyatlar
+* Ağ Gilas Mürəbbəsi - 7₼
+* Assorti Dondurma - 6₼
+* Çiyələk Dondurma - 6₼
+* Çiyələk Mürəbbəsi - 7₼
+* Meyvə Assorti - 20₼
+* Püstə - 10₼
+* Qapız - 5₼
+* Qızardılmış Dondurma - 8₼
+* Şokolad Dondurma - 6₼
+* Vanil Dondurma - 6₼
+* Vişnə Mürəbbəsi - 7₼
+* Yemiş - 5₼
+
+---
+
+### İsti İçkilər
+* Americano - 5₼
+* Black Tea - 10₼
+* Cappucino - 7₼
+* Çay Fincan - 2₼
+* Coffee Mocha - 6₼
+* Double Espresso - 5₼
+* Latte - 6₼
+* Raff Coffee - 7₼
+* Single Espresso - 4₼
+
+---
+
+### Sərinləşdirici İçkilər
+* Borjomi 0.5L - 5₼
+* Cola Classic - 5₼
+* Cola Zero - 5₼
+* Fanta - 5₼
+* Fuse Tea - 4₼
+* İsti Su - 5₼
+* Nataktari Duşes - 5₼
+* Nataktari Tərxun - 5₼
+* Nataktari Üzüm - 5₼
+* Qazlı Kobi - 5₼
+* Qazsız Sno - 5₼
+* Redbull - 9₼
+* Sairme Qazlı - 5₼
+* Sairme Qazsız - 5₼
+* Şalgam - 4₼
+* Sarıkız - 4₼
+* Sirab Qazlı 0.33 - 4₼
+* Sirab Qazlı 0.75 - 6₼
+* Sirab Qazsız 0.33 - 4₼
+* Sirab Qazsız 0.75 - 6₼
+* Sprite - 5₼
+* Tonic Schveppes - 4₼
+
+---
+
+### Təbii Şirələr
+* Albalı Kompot - 6₼
+* Feyxua Kompot - 6₼
+* Heyva Kompot - 6₼
+* Zoğal Kompot - 6₼
+* Albalı Glass - 3₼
+* Albalı Natural 1L - 8₼
+* Alma Glass - 3₼
+* Alma Natural 1L - 8₼
+* Ananas Glass - 3₼
+* Ananas Natural 1L - 8₼
+* Mulrivitamin Glass - 3₼
+* Multivitamin Natural 1L - 8₼
+* Pomidor Glass - 3₼
+* Pomidor Natural 1L - 8₼
+* Portağal Glass - 3₼
+* Portağal Natural 1L - 8₼
+* Şaftalı Glass - 3₼
+* Şaftalı Natural 1L - 8₼
+
+---
+
+### Fresh Şirələr
+* Alma Fresh - 8₼
+* Ananas Fresh - 12₼
+* Grapefrut Fresh - 10₼
+* Nar Fresh - 10₼
+* Portağal Fresh - 9₼
+
+---
+
+### Limonadlar
+* Apple Kivi Limonad 1L - 15.5₼
+* Apple Kivi Limonad Bokal - 5₼
+* Basil Limonad 1L - 15.5₼
+* Basil Limonad Bokal - 5₼
+* Bubble Gum Limonad 1L - 15.5₼
+* Bubble Gum Limonad Bokal - 5₼
+* Passion Frut Limonad 1L - 15.5₼
+* Passion Frut Limonad Bokal - 5₼
+
+---
+
+### Alkoqolsuz Kokteyllər
+* Berry Mix - 10₼
+* Exotic Passion - 9₼
+* Mojito Energy Non Alcohol - 12₼
+* Mojito Non Alcohol - 8₼
+* Pina Colada - 9₼
+
+---
+
+### Pivə
+* Efes Draft - 8₼
+* Efes Pilseneer 0.33L - 6₼
+* Efes Zero 0.33L - 5₼
+* Erdinger Dunhell 0.5L - 12₼
+* İcy 0.5L - 8₼
+* Kayaki 0.5L - 8₼
+* Kazbegi 0.5L - 8₼
+
+---
+
+### Şərab
+* Chateau Mukhrani Khvanchkara R.S.S - 120₼
+* Chateau mukhrani kindzmaruli R.S.S - 90₼
+* Chateau Mukhranı Qvevri Red Dry - 160₼
+* Gürcü kəmşirin Red - 50₼
+* Gürcü Şərabı Red - 30₼
+* Gürcü Şərab Red Kəmturş - 50₼
+* Gwh Keramika Alazanskya Dolina R.S.S - 50₼
+* Gwh Keramika Pirosmani R.S.S - 50₼
+* Gwh Keramika Saperavi R.D - 50₼
+* Hillside Prestige R.S.S - 40₼
+* Hillside Sangiovese R.D - 40₼
+* Marani saperavı red dray - 40₼
+* Winiveriya Kindzmaruli r.s.s - 65₼
+* Gürcü Suxoy Şərab Ağ 0.7ml - 25₼
+* Hillside Pinot Grigio W.D - 40₼
+* Hillside Sauvignon Balance W.D - 40₼
+* Iveria Tvishi W.S.S - 30₼
+* Teliani Valley Tvishi W.D - 30₼
+* Winiveria Rkatsiteli Dry White - 55₼
+* Winiveria W.D - 30₼
+* Chateau Mukhrani RO.D - 50₼
+* HillSide Rose - 40₼
+* Meysəri Rose - 50₼
+* Rose D Anjou RO.D - 55₼
+* Winiveria French Rose Semmi Dry - 55₼
+
+---
+
+### Kokteyllər
+* Aperol Spritz - 12₼
+* Blood Marry - 12₼
+* Cosmopolitan - 12₼
+* Espresso Martini - 15₼
+* Daiquiri - 15₼
+* Cuba Libra - 12₼
+* Gin Tonic - 12₼
+* Margarita Alcohol Cocktail - 11₼
+* Tequila Sunrise - 10₼
+* Negroni - 15₼
+* Pina Colada Alcohol - 10₼
+* Mojita Alcohol - 10₼
+* The Godfather - 15₼
+* Whiskey Sour - 12₼
+* Sex On The Beach - 13₼
+* Mojito Alcohol Energy - 14₼
+* Long İceland İce Tea - 13₼
+* Long İceland Energy - 17₼
+
+---
+
+### Votka
+* Absolute 0.5L - 55₼
+* Absolute 0.7L - 70₼
+* Absolute 1L - 90₼
+* Absolute 50ml - 7₼
+* Beluga 0.5L - 120₼
+* Beluga 0.7L - 145₼
+* Beluga 1L - 180₼
+* Beluga 50ml - 11₼
+* Drink House - 45₼
+* Finlandia 0.5L - 45₼
+* Finlandia 0.7L - 60₼
+* Finlandia 1L - 80₼
+* Finlandia 50ml - 6₼
+* Goral 0.5L - 70₼
+* Goral 0.7L - 90₼
+* Goral 1L - 110₼
+* Goral 50ml - 7₼
+* Grey Goose 0.7L - 145₼
+* Grey Goose 1L - 170₼
+* Grey Goose 50ml - 9₼
+* Medved - 65₼
+* Onegin 0.7L - 130₼
+* Onegin 1L - 150₼
+* Onegin 50qr - 10₼
+
+---
+
+### Viski
+* Ballantines 0.5L - 65₼
+* Ballantines 1L - 110₼
+* Ballantines 50ml - 7₼
+* Chivas 12 0.5L - 110₼
+* Chivas 12 0.7L - 130₼
+* Chivas 12 1L - 180₼
+* Glendfiddich 1L - 240₼
+* Chivas 12 50ml - 12₼
+* Chivas 18 1L - 340₼
+* Chivas 18 50ml - 27₼
+* Glendfiddich 50ml - 14₼
+* Jack Daniels 0.5L - 85₼
+* Jack Daniels 0.7L - 120₼
+* Jack Daniels 1L - 140₼
+* Jack Daniels 50ml - 9₼
+* Jameson 0.5L - 85₼
+* Jameson 0.7L - 110₼
+* Jameson 1L - 130₼
+* Jameson 50ml - 8₼
+* Macallan 1L - 350₼
+* Macallan 50ml - 28₼
+* Monkey Shoulder 0.5L - 120₼
+* Monkey Shoulder 0.7L - 150₼
+* Monkey Shoulder 1L - 200₼
+* Monkey Shoulder 50ml - 13₼
+
+---
+
+### Tekila
+* Olmeca Bianco 0.5 L - 70₼
+* Olmeca Bianco 0.7 L - 100₼
+* Olmeca Bianco 1 L - 130₼
+* Olmeca Bianco 50 ml - 8₼
+* Olmeca Gold 1 L - 130₼
+* Olmeca Gold 50 ml - 8₼
+* Patron Silver 1 L - 300₼
+* Patron Silver 50 ml - 17₼
+
+---
+
+### Gin
+* Beeffeather 1L - 100₼
+* Beeffeather 50ml - 6₼
+* Bombay Sapphire 0.7L - 100₼
+* Bombay Sapphire 50ml - 8₼
+* Gordons 1L - 85₼
+* Gordons 50ml - 6₼
+* Hendrics 1L - 180₼
+* Hendrics 50ml - 11₼
+
+---
+
+### Konyak
+* Hennessy V.S.O.P 0.7L - 280₼
+* Hennessy V.S.O.P 50ml - 23₼
+* Sarajishvili 0.5L - 50₼
+* Sarajishvili 50 ml - 6₼
+* Sarajishvili Vs 0.7L - 90₼
+* Sarajishvili Vs 50ml - 9₼
+* Sarajishvili VSOP 0.7L - 120₼
+* Sarajishvili VSOP 50ml - 11₼
+* Sarajishvili XO 0.7 - 220₼
+* Sarajishvili XO 50ml - 18₼
+* Tikhari 0.5L - 50₼
+* Tikhari 50ml - 6₼
+
+---
+
+### Likerlər
+* Absenth 50ml - 9₼
+* Aperol 50ml - 6₼
+* Baileys 50 ml - 6₼
+* Blue Curacao 50ml - 6₼
+* Bols Melon 50ml - 7₼
+* Campari 1 Lt - 110₼
+* De Kuyper Triple Sec 50ml - 9₼
+* Campari 50ml - 7₼
+* Cointreau 50ml - 6₼
+* Disaronno 50ml - 6₼
+* Crème Banana Bardinet 50ml - 10₼
+* Jagermaister 0.5L - 60₼
+* Jagermaister 0.7L - 75₼
+* Jagermaister 1L - 100₼
+* Jagermaister 50 ml - 7₼
+* Kahlua 50ml - 7₼
+* Malibu 50ml - 5₼
+* Passion Fruit 50ml - 12₼
+* Peach Tree 50ml - 8₼
+* Safari 50ml - 9₼
+* Sambuca 50ml - 8₼
+
+---
+
+### Məhsullar
+* Takeaway Qab - 0.5₼
+* Ekstra - 5₼
+* Ekstra 25 - 25₼
+
+---
+
+### Qəlyan və Siqaret
+* Ananas Qəlyan - 70₼
+* Kent Giləmeyvə - 10₼
+* Sobranie Sadə - 10₼
+* Çaşka Qəlyan - 50₼
+* Qreypfrut Qəlyan - 60₼
+* Kent 4 - 10₼
+* Sobranie Ballı - 10₼
+* Yeni İl Menyusu 120 - 120₼
+* Yeni İl Menyusu 80 - 80₼
+
+---
+
+### Şotlar
+* Apple Shot - 10₼
+* B52 - 8₼
+* B55 - 9₼
+* Meduza - 12₼
+* Kivi Shot - 10₼
+* Hirosima - 12₼
