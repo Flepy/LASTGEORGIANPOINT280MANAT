@@ -308,6 +308,7 @@ export const translations = {
     hoursAndLocation: "Hours & Location",
     footerDescription: "Bringing authentic Georgian flavors to Baku with sophisticated dining and warm hospitality.",
     allRightsReserved: "© 2024 Georgian Point. All rights reserved.",
+    createdBy: "Created by",
   },
   
   ru: {
@@ -519,6 +520,7 @@ export const translations = {
     hoursAndLocation: "Время и место",
     footerDescription: "Привносим аутентичные грузинские вкусы в Баку с изысканной кухней и теплым гостеприимством.",
     allRightsReserved: "© 2024 Georgian Point. Все права защищены.",
+    createdBy: "Создано",
   },
   
   az: {

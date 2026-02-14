@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { useTranslation } from '@/hooks/useTranslation';
 import logoImage from '@assets/Vector_1754933981235.png';
+import snapSolveLogo from '@assets/Frame_13_1771067901862.png';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -96,10 +97,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-dark-bg border-opacity-30 mt-8 pt-8 text-center">
-          <p className="text-dark-bg opacity-70">
+        <div className="border-t border-dark-bg border-opacity-30 mt-8 pt-8 flex flex-col items-center justify-center space-y-4">
+          <p className="text-dark-bg opacity-70 text-center">
             {t('allRightsReserved')}
           </p>
+          <a 
+            href="https://snapsolve.ink" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 text-dark-bg opacity-70 hover:opacity-100 transition-opacity"
+          >
+            <span>{t('createdBy')}</span>
+            <img src={snapSolveLogo} alt="SnapSolve Logo" className="w-6 h-6 object-contain" />
+            <span className="font-bold">SnapSolve</span>
+          </a>
         </div>
       </div>
     </footer>
